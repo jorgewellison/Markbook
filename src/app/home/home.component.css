@@ -1,0 +1,17 @@
+.principal{
+  background-image: url("https://www2.unifap.br/biblioteca/files/2019/04/post-para-facebook-10.png");
+  background-size: 25% 25% 25% 25%;
+  opacity: 0.5;
+  width: 100%;
+  float: left;
+}
+
+.bg-dark{
+  margin: 60px;
+  text-align: center;
+}
+.card-body{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
