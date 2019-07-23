@@ -4,6 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  {
+    path:'upload',
+    loadChildren: '.upload-file/upload-file.module#UploadFileModule'
+  }
 ];
 
 @NgModule({
