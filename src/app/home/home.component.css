@@ -1,17 +1,42 @@
-.principal{
-  background-image: url("https://www2.unifap.br/biblioteca/files/2019/04/post-para-facebook-10.png");
+.principal {
   background-size: 25% 25% 25% 25%;
-  opacity: 0.5;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(https://www2.unifap.br/biblioteca/files/2019/04/post-para-facebook-10.png);
   width: 100%;
   float: left;
 }
 
-.bg-dark{
-  margin: 60px;
+.bg-dark {
+  margin: 100px 100px;
   text-align: center;
+  width: 70%;
+  float: left;
 }
-.card-body{
+
+.card-body {
   margin: 10px;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 15px;
+}
+
+
+.login {
+  background: #343a40;
+  width: 30%;
+  float: right;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 100px 120px;
+}
+
+.login label {
+  color: white;
+}
+
+.login h2 {
+  color: #17a2b8;
+  margin-bottom: 15px;
+}
+
+.login p{
+  color: white;
 }
