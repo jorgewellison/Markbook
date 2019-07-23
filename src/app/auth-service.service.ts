@@ -1,23 +1,26 @@
 import { Injectable } from "@angular/core";
+import { Usuario } from './home/usuario';
+import { Router } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @Injectable({
   providedIn: "root"
 })
 export class AuthServiceService {
-  login(user: string, password: string): boolean {
-    if (user === "user" && password === "password") {
-      localStorage.setItem("username", user);
-      return true;
+
+  private usuarioAutenticado: boolean = false;
+
+  constructor(private router: Router){
+
+  }
+  fazerLogin(usuario: Usuario) {
+    console.log(usuario)
+    if (usuario.nome === 'usuario@email.com' && usuario.senha === '123456') {
+      this.usuarioAutenticado = true;
+      sessionStorage.setItem('username', 'Jorge');
+      this.router.navigate(['dashboard']);
+    } else {
+      this.usuarioAutenticado = false;
     }
-    return false;
-  }
-  logout(): any {
-    localStorage.removeItem("username");
-  }
-  getUser(): any {
-    return localStorage.getItem("username");
-  }
-  isLoggedIn(): boolean {
-    return this.getUser() !== null;
   }
 }
