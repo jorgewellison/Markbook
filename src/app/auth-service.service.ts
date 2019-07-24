@@ -14,7 +14,6 @@ export class AuthServiceService {
 
   }
   fazerLogin(usuario: Usuario) {
-    console.log(usuario)
     if (usuario.nome === 'usuario@email.com' && usuario.senha === '123456') {
       this.usuarioAutenticado = true;
       sessionStorage.setItem('username', 'Jorge');

@@ -50,6 +50,39 @@ button{
   margin-left: 50px;
 }
 
+.row input{
+  text-align: center;
+}
+
 .btn-primary{
   margin-left: 140px;
+}
+
+.imagens-livros{
+  width: 100%;
+  text-align: center;
+  background: #343a40;
+}
+
+.imagens-livros img{
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 17px;
+}
+
+.article{
+  width: 100%;
+}
+
+.sobre-nos{
+  width: 50%;
+  float: left;
+  padding: 10px;
+  margin: 40px 60px;
+}
+.onde-estamos{
+  float: right;
+  width: 30%;
+  margin: 40px 60px;
 }

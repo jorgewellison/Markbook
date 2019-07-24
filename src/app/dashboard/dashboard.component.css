@@ -1,0 +1,43 @@
+.navbar-light {
+  margin-left: 87px;
+  width: 100%;
+}
+
+.navbar-nav #upload {
+  margin-left: 680px;
+  color: red;
+}
+
+.dash {
+  background-size: 25% 25% 25% 25%;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
+  width: 100%;
+}
+
+.perfil {
+  padding: 60px 110px;
+}
+
+.perfil img {
+  width: 190px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.list-group {
+  width: 190px;
+  margin-top: 10px;
+}
+
+.list-group a{
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.list-group #sair{
+  background: #660011;
+}
+
+.perfil h3{
+  margin-bottom: 20px;
+}

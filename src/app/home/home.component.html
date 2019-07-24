@@ -5,22 +5,42 @@
     </div>
   </div>
   <div class="login">
-          <h2>Login</h2>
-          <div class="row">
-            <div class="input-field col s6">
-            <label class="active" for="usuario">Usuário</label><br>
-            <input [(ngModel)]="usuario.nome" id ="usuario" type="text" class="validate">
-            </div>
-          </div>
-          <div class="row">
-              <div class="input-field col s6">
-              <label class="active" for="senha">Senha</label><br>
-              <input [(ngModel)]="usuario.senha" id ="senha" type="password" class="validate">
-              </div>
-            </div>
-          <button type="submit" class="btn btn-primary" (click)="fazerLogin()">Login</button>
-          <p><br>Ainda não é cadastrado?</p>
-          <button type="button" class="btn btn-info">Cadastrar-se</button>
+    <h2>Login</h2>
+    <div class="row">
+      <div class="input-field col s6">
+        <label class="active" for="usuario">Usuário</label><br>
+        <input [(ngModel)]="usuario.nome" id="usuario" type="text" class="validate">
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <label class="active" for="senha">Senha</label><br>
+        <input [(ngModel)]="usuario.senha" id="senha" type="password" class="validate">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="fazerLogin()">Login</button>
+    <p><br>Ainda não é cadastrado?</p>
+    <button type="button" class="btn btn-info">Cadastrar-se</button>
   </div>
 </main>
+<div class="imagens-livros">
+  <img src="../assets/img/1.jpg">
+  <img src="../assets/img/2.jpg">
+  <img src="../assets/img/3.jpg">
+  <img src="../assets/img/4.jpg">
+</div>
+<article class="article">
+  <div class="sobre-nos">
+    <h2>Sobre o Markbook</h2>
+    <p>Somos uma plataforma de biblioteca online, na qual os usuários poderão gerenciar os seus livros favoritos.
+      Portanto, através de sua linha do tempo, será possível criar um círculo social com os amigos, assim permitindo
+      também avaliar e receber avaliações sobre as atividades recentes.
+    </p>
+  </div>
+  <div class="onde-estamos">
+    <h2>Onde estamos</h2>
+    <p>Rua da Aurora - Centro, Rio Tinto - Paraíba</p>
+  </div>
+</article>
+
 <router-outlet></router-outlet>
