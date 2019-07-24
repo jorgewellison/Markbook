@@ -1,0 +1,28 @@
+.content {
+  /* position: static; */
+  margin-top: 590px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+.zoom {
+  height: 270px;
+  width: 200px;
+  margin: 20px;
+  transition: transform 0.5s;
+}
+
+.zoom:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.shadow {
+  box-shadow: 10%;
+}

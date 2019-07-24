@@ -13,6 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CarrosselLivrosComponent } from './carrossel-livros/carrossel-livros.component';
+import { CarrosselLivrosService } from './carrossel-livros/carrossel-livros.service';
+import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    CarrosselLivrosComponent,
+    ExibeLivrosComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NgbModule,
     FormsModule
   ],
-  providers: [AuthServiceService],
+  providers: [
+    AuthServiceService,
+    CarrosselLivrosService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
