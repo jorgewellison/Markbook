@@ -1,25 +1,40 @@
-<nav
-  class="navbar navbar-expand-lg navbar-light"
-  style="background-color: #13c7ae;"
->
-  <a class="navbar-brand" [routerLink]="['']">Bookmark</a>
-  <div class="collapse navbar-collapse" id="navbarText">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+<header class="justify-content-center align-items-center align-middle">
+  <div class="row flex-nowrap justify-content-center align-items-center">
+    <div class="col-md-8" style="margin-top: 28px">
+        <img class="brand-img" (click)="logged = !logged"
+        style="width: 40px; margin-right: 10px; margin-bottom: 7px;" src="assets/img/logo.png"/>
+        <a class="navbar-brand" [routerLink]="['']">BOOKMARK</a>  
+      <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Pesquisar"
+            aria-label="Pesquisar"
+          />
+          <a><i style="font-size: 35px" class="material-icons">search</i></a>
+        </form>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center"> 
+  <div class="col-md-8 collapse navbar-collapse justify-content-between" id="navbarText">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['']">INÍCIO</a>
+        <a class="nav-link" [routerLink]="['']">HOME</a>
+      </li>
+      <li class="nav-item" *ngIf="!logged">
+        <a class="nav-link" [routerLink]="['']">QUEM SOMOS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/upload']">Upload Arquivo</a>
+        <a class="nav-link" [routerLink]="['']">CONTATO</a>
+      </li>
+      <li class="nav-item" *ngIf="logged">
+        <a class="nav-link" [routerLink]="['']">LIVROS PÚBLICOS</a>
       </li>
     </ul>
+    <app-upload-file *ngIf="logged"></app-upload-file>
   </div>
-  <form class="form-inline my-2 my-lg-0">
-    <input
-      class="form-control mr-sm-2"
-      type="search"
-      placeholder="Pesquisar"
-      aria-label="Pesquisar"
-    />
-    <form class="form-inline my-2 my-lg-0"></form>
-  </form>
 </nav>

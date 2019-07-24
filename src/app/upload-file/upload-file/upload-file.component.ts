@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-upload-file',
@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upload-file.component.css']
 })
 export class UploadFileComponent implements OnInit {
-
+  @ViewChild('fileInput', {static: true}) fileInput: ElementRef; 
+  openBrowser (): void {
+    this.fileInput.nativeElement.click();
+  }
   constructor() { }
 
   ngOnInit() {
