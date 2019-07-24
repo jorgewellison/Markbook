@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CarrosselLivrosComponent } from './carrossel-livros/carrossel-livros.component';
+import { CarrosselLivrosService } from './carrossel-livros/carrossel-livros.service';
 import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 
 @NgModule({
@@ -22,6 +24,7 @@ import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
     FooterComponent,
     HomeComponent,
     DashboardComponent,
+    CarrosselLivrosComponent,
     ExibeLivrosComponent
   ],
   imports: [
@@ -30,7 +33,10 @@ import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
     NgbModule,
     FormsModule
   ],
-  providers: [AuthServiceService],
+  providers: [
+    AuthServiceService,
+    CarrosselLivrosService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
