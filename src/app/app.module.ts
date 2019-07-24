@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    ExibeLivrosComponent
   ],
   imports: [
     BrowserModule,
