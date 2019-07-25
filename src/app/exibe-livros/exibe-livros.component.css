@@ -17,6 +17,7 @@ li {
   width: 200px;
   margin: 20px;
   transition: transform 0.5s;
+  /* display: block; */
 }
 
 .zoom:hover {
@@ -24,5 +25,6 @@ li {
 }
 
 .shadow {
-  box-shadow: 10%;
+  /* border: 1px solid;
+  box-shadow: 5px 10px 8px #888888; */
 }
