@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Livro } from './livro';
+
 import { CarrosselLivrosService } from './carrossel-livros.service';
+import { LivroComponent } from '../livro/livro.component';
 
 @Component({
   selector: 'app-carrossel-livros',
@@ -8,13 +9,9 @@ import { CarrosselLivrosService } from './carrossel-livros.service';
   styleUrls: ['./carrossel-livros.component.css']
 })
 export class CarrosselLivrosComponent implements OnInit {
-  livros: Livro[]; 
-  src: string;
 
   constructor(private carrosselLivros: CarrosselLivrosService) {
-    //let servico = new CarrosselLivrosService(); // USANDO INJEÇÃO DE DEPENDÊNCIA
-    this.livros = carrosselLivros.getLivros();
-    this.src = carrosselLivros.getSrc();
+    // private livros: LivroComponent[]
   }
 
   ngOnInit() {

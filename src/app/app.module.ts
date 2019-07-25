@@ -16,6 +16,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarrosselLivrosComponent } from './carrossel-livros/carrossel-livros.component';
 import { CarrosselLivrosService } from './carrossel-livros/carrossel-livros.service';
 import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
+import { LivroComponent } from './livro/livro.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
     HomeComponent,
     DashboardComponent,
     CarrosselLivrosComponent,
-    ExibeLivrosComponent
+    ExibeLivrosComponent,
+    LivroComponent
   ],
   imports: [
     BrowserModule,
