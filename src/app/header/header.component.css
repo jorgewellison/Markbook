@@ -31,6 +31,15 @@ a {
   text-decoration: none;
 }
 
+/* logo-nome */
+/* retirar caso não vá usar a imagem do nome */
+.navbar-logo {
+  height: 15%;
+  width: 15%;
+  align-content: left;
+  margin-right: 100px;
+}
+
 .navbar-brand {
   width: 25%;
   float: left;
