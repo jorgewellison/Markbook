@@ -1,3 +1,4 @@
+import { NavComponent } from './nav/nav.component';
 import { AuthServiceService } from './auth-service.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,7 @@ import { CarrosselLivrosService } from './carrossel-livros/carrossel-livros.serv
 import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 import { LivroComponent } from './livro/livro.component';
 import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
+import { LoggedGuard } from './logged.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { UploadFileComponent } from './upload-file/upload-file/upload-file.compo
     CarrosselLivrosComponent,
     ExibeLivrosComponent,
     LivroComponent,
-    UploadFileComponent
+    UploadFileComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { UploadFileComponent } from './upload-file/upload-file/upload-file.compo
   providers: [
     AuthServiceService,
     CarrosselLivrosService,
+    LoggedGuard
   ],
   bootstrap: [AppComponent]
 })

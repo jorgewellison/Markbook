@@ -1,0 +1,88 @@
+.navbar-light {
+  margin-left: 87px;
+  width: 100%;
+}
+
+.navbar-nav #upload {
+  margin-left: 680px;
+  color: red;
+}
+
+.dash {
+  background-color: #0B221F;
+  width: 100%;
+  float: none;
+}
+
+.perfil {
+  padding-bottom: 60px;
+  padding-left: 100px;
+  width: 30%;
+  float: left;
+  background: rgb(54, 66, 71);
+}
+
+.perfil img {
+  width: 190px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.list-group {
+  width: 190px;
+  margin-top: 10px;
+}
+
+.list-group a {
+  margin: 5px;
+  border-radius: 10px;
+  background-color: rgb(205, 248, 241);
+}
+
+.list-group #sair {
+  background: #cf1d3b;
+}
+
+.perfil h3 {
+  padding-top: 32px;
+  color: white;
+}
+
+.list-group a:hover {
+  color: rgb(61, 100, 100);
+}
+
+.timeline-publica {
+  width: 70%;
+  float: right;
+  padding-top: 28px;
+  padding-bottom: 152px;
+  background:rgb(49, 46, 46);
+}
+
+.cards {
+  text-align: center;
+  float: right;
+  margin-right: 340px;
+  padding-top: 30px;
+
+}
+
+.cards h4 {
+  margin-bottom: 29px;
+  color: white;
+}
+
+.minha-biblioteca{
+  width: 100%;
+  text-align: center;
+  float: right;
+}
+
+.minha-biblioteca h3{
+  padding-top: 2px;
+}
+
+.cards .text-white{
+  border-radius: 12px;
+}

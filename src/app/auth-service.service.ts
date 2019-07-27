@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { Usuario } from './home/usuario';
 import { Router } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -8,19 +7,23 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 })
 export class AuthServiceService {
 
-  private usuarioAutenticado: boolean = false;
-
-  constructor(private router: Router){
+ constructor(private router: Router) {
 
   }
-  fazerLogin(usuario: Usuario) {
-    console.log(usuario)
-    if (usuario.nome === 'usuario@email.com' && usuario.senha === '123456') {
-      this.usuarioAutenticado = true;
-      sessionStorage.setItem('username', 'Jorge');
+  fazerLogin(usuario: string, senha: string) : boolean {
+    if (usuario === 'usuario@email.com' && senha === '123456') {
+      localStorage.setItem('username', 'Usuario');
       this.router.navigate(['dashboard']);
+      return true;
     } else {
-      this.usuarioAutenticado = false;
+      return false;
     }
   }
+
+  logout() : any { localStorage.removeItem('username');}
+  getUser() : any { return localStorage.getItem('username');}
+  logado(): boolean { return this.getUser() !== null;}
+
+
 }
+

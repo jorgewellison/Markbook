@@ -4,25 +4,94 @@
       <h1 class="card-title">Gerencie suas leituras pessoais com segurança.</h1>
     </div>
   </div>
-  <div class="login">
-          <h2>Login</h2>
-          <div class="row">
-            <div class="input-field col s6">
-            <label class="active" for="usuario">Usuário</label><br>
-            <input [(ngModel)]="usuario.nome" id ="usuario" type="text" class="validate">
+  <div class="container">
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+
+    <div class="content">
+      <div id="login">
+        <h2>Login</h2>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f,value)" method="post" action="">
+            <p>
+                <label class="active" for="email">Email</label><br>
+                <input id="email" name="email" type="email" class="validate" #usuario>
+              </p>
+
+              <p>
+                <label class="active" for="senha">Senha</label><br>
+                <input id="senha" name="senha" type="password" class="validate" #senha>
+              </p>
+          <p>
+            <button type="submit" class="btn btn-primary" (click)="fazerLogin(usuario.value, senha.value)">Login</button>
+          </p>
+
+
+          <div class="alert alert-danger" role="alert" *ngIf="message">
+              {{ message }}
             </div>
-          </div>
-          <div class="row">
-              <div class="input-field col s6">
-              <label class="active" for="senha">Senha</label><br>
-              <input [(ngModel)]="usuario.senha" id ="senha" type="password" class="validate">
-              </div>
-            </div>
-          <button type="submit" class="btn btn-primary" (click)="fazerLogin()">Login</button>
-          <p><br>Ainda não é cadastrado?</p>
-          <button type="button" class="btn btn-info">Cadastrar-se</button>
+
+          <p>
+            Ainda não é cadastrado?
+          </p>
+
+          <p class="link">
+            <a href="#paracadastro">Cadastre-se</a>
+          </p>
+        </form>
+      </div>
+
+      <div id="cadastro">
+        <form method="post" action="">
+          <h2>Cadastro</h2>
+
+          <p>
+            <label for="nome_cad">Seu nome completo:</label><br>
+            <input id="nome_cad" name="nome_cad" required="required" type="text"/>
+          </p>
+
+          <p>
+            <label for="email_cad">Seu email:</label><br>
+            <input id="email_cad" name="email_cad" required="required" type="email"/>
+          </p>
+
+          <p>
+            <label for="senha_cad">Sua senha:</label><br>
+            <input id="senha_cad" name="senha_cad" required="required" type="password"/>
+          </p>
+
+          <p>
+            <input type="submit" value="Cadastrar" />
+          </p>
+
+          <p class="link">
+            Já tem conta?
+            <a href="#paralogin"> Ir para Login </a>
+          </p>
+        </form>
+      </div>
+    </div>
   </div>
   <!-- <app-livro></app-livro> -->
   <app-exibe-livros></app-exibe-livros>
 </main>
+<article class="article">
+  <div class="sobre-nos">
+    <div class="card" style="width: 37rem;">
+      <div class="card-body">
+        <h5 class="card-title">Sobre nós</h5>
+        <p class="card-text">Somos uma plataforma de biblioteca online, na qual os usuários poderão gerenciar os seus
+          livros favoritos.
+          Portanto, através de sua linha do tempo, será possível criar um círculo social com os amigos, assim permitindo
+          também avaliar e receber avaliações sobre as atividades recentes.</p>
+      </div>
+    </div>
+  </div>
+  <div class="onde-estamos">
+    <h2>Onde estamos</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.7115098676404!2d-35.08097228567283!3d-6.804906095081635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ad0f9c8bcbf6bf%3A0x4b228af8df4435f8!2sR.+da+Aurora%2C+Rio+Tinto+-+PB%2C+58297-000!5e0!3m2!1spt-BR!2sbr!4v1564103324958!5m2!1spt-BR!2sbr"
+      width="400" height="250"></iframe>
+  </div>
+</article>
+
 <router-outlet></router-outlet>
