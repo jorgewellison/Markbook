@@ -17,6 +17,7 @@ import { CarrosselLivrosComponent } from './carrossel-livros/carrossel-livros.co
 import { CarrosselLivrosService } from './carrossel-livros/carrossel-livros.service';
 import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 import { LivroComponent } from './livro/livro.component';
+import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LivroComponent } from './livro/livro.component';
     DashboardComponent,
     CarrosselLivrosComponent,
     ExibeLivrosComponent,
-    LivroComponent
+    LivroComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,

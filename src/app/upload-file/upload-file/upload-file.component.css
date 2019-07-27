@@ -1,0 +1,10 @@
+.file-input {
+    display: none;
+}
+
+.file-button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 8px;
+} 
