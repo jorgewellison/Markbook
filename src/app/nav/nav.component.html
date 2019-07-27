@@ -2,17 +2,18 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" a [routerLink]="['dashboard']">HOME</a>
+        <a class="nav-link" [routerLink]="['']">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">QUEM SOMOS</a>
+        <a class="nav-link" [routerLink]="['']">QUEM SOMOS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="mailto:bookmarkufpb@gmail.com">CONTATO</a>
+        <a class="nav-link" [routerLink]="['']">CONTATO</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">ONDE ESTAMOS</a>
+      <li class="nav-item" *ngIf="logged">
+        <a class="nav-link" [routerLink]="['']">LIVROS PÚBLICOS</a>
       </li>
     </ul>
+    <app-upload-file *ngIf="logged"></app-upload-file>
   </div>
 </nav>
