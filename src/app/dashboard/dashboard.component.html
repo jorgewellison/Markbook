@@ -1,2 +1,43 @@
-<p>Mizé</p>
+<main class="dash">
+  <div class="perfil">
+    <h3>Bem vindo, Jorge.</h3>
+    <img src="https://pbs.twimg.com/profile_images/1035645896640405504/Mb5KTYhM_400x400.jpg">
+    <ul class="list-group">
+      <a class="list-group-item" [routerLink]="[]">Editar perfil</a>
+      <a class="list-group-item" [routerLink]="[]">Minha biblioteca</a>
+      <a class="list-group-item" [routerLink]="[]">Seguindo</a>
+      <a class="list-group-item" [routerLink]="[]">Seguidores</a>
+      <!---<a *ngIf="authService.getUser()" class="list-group-item" [routerLink]="['']" id="sair">Sair</a>-->
+      <a class="list-group-item" [routerLink]="['']" id="sair">Sair</a>
+    </ul>
+  </div>
+  <div class="timeline-publica">
+    <div class="cards" style="width: 18rem;">
+      <h4>Linha do tempo</h4>
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-body">
+          <p class="card-text">Mirian postou um novo livro.</p>
+        </div>
+      </div>
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-body">
+          <p class="card-text">Alex favoritou um novo livro.</p>
+        </div>
+      </div>
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-body">
+          <p class="card-text">Yann está seguindo um novo amigo.</p>
+        </div>
+      </div>
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-body">
+          <p class="card-text">Marinalda curtiu uma nova atividade.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<article class="minha-biblioteca">
+  <h3>Minha biblioteca</h3>
+</article>
 <router-outlet></router-outlet>

@@ -1,0 +1,12 @@
+.navbar{
+  width: 100%;
+}
+
+.collapse{
+  margin-left: 45px;
+  position: relative;
+}
+
+li{
+  margin-left: 40px;
+}

@@ -29,6 +29,7 @@
 
 a {
   text-decoration: none;
+  padding: 0px;
 }
 
 /* logo-nome */
@@ -54,4 +55,34 @@ a {
 .navbar-nav {
   float: left;
   padding: 18px;
+}
+
+
+header {
+  height: 100px;
+  background-color: #13c7ae;
+}
+
+nav {
+  background: #333333;
+  height: 45px;
+}
+
+a.nav-link {
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+a.nav-link:hover {
+  border-bottom: 1px solid white;
+}
+
+#navbarText {
+  padding: 0px;
+}
+
+.navbar-brand {
+  font-size: 27px;
+  font-weight: 550;
+  color: #333;
 }

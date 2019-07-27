@@ -1,7 +1,6 @@
 import { AuthServiceService } from "./../auth-service.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { Usuario } from "./usuario";
 
 @Component({
   selector: "app-home",
@@ -9,14 +8,30 @@ import { Usuario } from "./usuario";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  private usuario: Usuario = new Usuario();
+  message: string;
 
   constructor(public authService: AuthServiceService) {
+    this.message = '';
   }
+
+  fazerLogin(usuario: string, senha: string) : boolean {
+    this.message = '';
+    if (!this.authService.fazerLogin(usuario, senha)){
+      this.message = "Senha ou usuario incorreto(s)!";
+      setTimeout(function(){
+        this.message = '';
+      }.bind(this), 2500);
+      }
+      return false;
+    }
+
+  logout() : boolean { this.authService.logout(); return false; }
 
   ngOnInit() {}
 
-  fazerLogin() {
-    this.authService.fazerLogin(this.usuario);
   }
-}
+
+ /*onSubmit(form: any) {
+    this.authService = new Usuario(form.nome, form.email);
+  }*/
+

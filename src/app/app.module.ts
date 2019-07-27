@@ -1,3 +1,4 @@
+import { NavComponent } from './nav/nav.component';
 import { AuthServiceService } from './auth-service.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,8 @@ import { ListaDeLivrosService } from './lista-de-livros/lista-de-livros.service'
 import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 import { LivroComponent } from './livro/livro.component';
 import { FormularioLivroComponent } from './formulario-livro/formulario-livro.component';
+import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
+import { LoggedGuard } from './logged.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { FormularioLivroComponent } from './formulario-livro/formulario-livro.co
     ListaDeLivrosComponent,
     ExibeLivrosComponent,
     LivroComponent,
-    FormularioLivroComponent
+    FormularioLivroComponent,
+    UploadFileComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +45,7 @@ import { FormularioLivroComponent } from './formulario-livro/formulario-livro.co
   providers: [
     AuthServiceService,
     ListaDeLivrosService,
+    LoggedGuard
   ],
   bootstrap: [AppComponent]
 })
