@@ -13,10 +13,11 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CarrosselLivrosComponent } from './carrossel-livros/carrossel-livros.component';
-import { CarrosselLivrosService } from './carrossel-livros/carrossel-livros.service';
+import { ListaDeLivrosComponent } from './lista-de-livros/lista-de-livros.component';
+import { ListaDeLivrosService } from './lista-de-livros/lista-de-livros.service';
 import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 import { LivroComponent } from './livro/livro.component';
+import { FormularioLivroComponent } from './formulario-livro/formulario-livro.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { LivroComponent } from './livro/livro.component';
     FooterComponent,
     HomeComponent,
     DashboardComponent,
-    CarrosselLivrosComponent,
+    ListaDeLivrosComponent,
     ExibeLivrosComponent,
-    LivroComponent
+    LivroComponent,
+    FormularioLivroComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ import { LivroComponent } from './livro/livro.component';
   ],
   providers: [
     AuthServiceService,
-    CarrosselLivrosService,
+    ListaDeLivrosService,
   ],
   bootstrap: [AppComponent]
 })
