@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent},
   { path: 'home', component: HomeComponent },
-  //{ path:'upload',loadChildren: '.upload-file/upload-file.module#UploadFileModule'}
+  { path:'upload', loadChildren: './upload-file/upload-file.module#UploadFileModule'}
 ];
 
 @NgModule({
