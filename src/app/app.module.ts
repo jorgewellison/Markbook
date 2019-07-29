@@ -14,13 +14,12 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ListaDeLivrosComponent } from './lista-de-livros/lista-de-livros.component';
-import { ListaDeLivrosService } from './lista-de-livros/lista-de-livros.service';
 import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 import { LivroComponent } from './livro/livro.component';
 import { FormularioLivroComponent } from './formulario-livro/formulario-livro.component';
 import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
 import { LoggedGuard } from './logged.guard';
+import { FormularioLivroService } from './formulario-livro/formulario-livro.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { LoggedGuard } from './logged.guard';
     FooterComponent,
     HomeComponent,
     DashboardComponent,
-    ListaDeLivrosComponent,
     ExibeLivrosComponent,
     LivroComponent,
     FormularioLivroComponent,
@@ -44,8 +42,8 @@ import { LoggedGuard } from './logged.guard';
   ],
   providers: [
     AuthServiceService,
-    ListaDeLivrosService,
-    LoggedGuard
+    LoggedGuard,
+    FormularioLivroService
   ],
   bootstrap: [AppComponent]
 })

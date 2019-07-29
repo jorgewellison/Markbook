@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { LivroComponent } from '../livro/livro.component';
+import { FormularioLivroService } from './formulario-livro.service';
 
 @Component({
   selector: 'app-formulario-livro',
@@ -8,25 +7,28 @@ import { LivroComponent } from '../livro/livro.component';
   styleUrls: ['./formulario-livro.component.css']
 })
 export class FormularioLivroComponent implements OnInit {
-  // private livro: Livro;
 
-  // Injeção de dependência
-  constructor(private livro: LivroComponent) {
+  constructor(private form: FormularioLivroService) { 
     
-   }
-
-  setLivro(nome: string, autor: string, categoria: string,
-    descricao: string, srcImagem: string, quantPaginas: number) {
-
-    this.livro.setNome = nome;
-    this.livro.setAutor = autor;
-    this.livro.setCategoria = categoria;
-    this.livro.setDescricao = descricao;
-    this.livro.setSrcImagem = srcImagem;
-    this.livro.setQuantPaginas = quantPaginas;
+  }
+  setLivro(nome: string, autor: string, categoria: string, 
+    descricao: string, urlImagem: string, quantPaginas: number) {
+    
+    this.form.getLivro.setNome = nome;
+    
   }
 
-  ngOnInit() {
-  }
+  // setLivro(nome: string, autor: string, categoria: string,
+  //   descricao: string, srcImagem: string, quantPaginas: number) {
+
+  //   this.livro.setNome = nome;
+  //   this.livro.setAutor = autor;
+  //   this.livro.setCategoria = categoria;
+  //   this.livro.setDescricao = descricao;
+  //   this.livro.setSrcImagem = srcImagem;
+  //   this.livro.setQuantPaginas = quantPaginas;
+  // }
+
+  ngOnInit() { }
 
 }

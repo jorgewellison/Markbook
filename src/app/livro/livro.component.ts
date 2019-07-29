@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FormularioLivroService } from '../formulario-livro/formulario-livro.service';
+
 @Component({
   selector: 'app-livro',
   templateUrl: './livro.component.html',
@@ -11,10 +13,12 @@ export class LivroComponent implements OnInit {
   private autor: string;
   private categoria: string;
   private descricao: string;
-  private srcImagem: string; //src da imagem
+  private srcImagem: string; //url da imagem
   private quantPaginas: number;
 
-  constructor () { }
+  constructor(form: FormularioLivroService) { 
+    form
+  }
 
   get getNome(): string {
     return this.nome;
@@ -51,7 +55,7 @@ export class LivroComponent implements OnInit {
   set setQuantPaginas(quantPaginas: number) {
     this.quantPaginas = quantPaginas;
   }
-  
+
   get getSrcImagem(): string {
     return this.srcImagem;
   }
