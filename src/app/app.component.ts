@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthServiceService } from './auth-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bookmark';
+
+  mostrarNav : boolean = false;
+
+  constructor(private authService: AuthServiceService){
+
+  }
+
+  ngOnInit(){
+    this.authService.mostrarNavEmitter.subscribe(
+      mostrar => this.mostrarNav = mostrar
+    );
+  }
 }
