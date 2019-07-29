@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FormularioLivroService } from '../formulario-livro/formulario-livro.service';
+
 @Component({
   selector: 'app-livro',
   templateUrl: './livro.component.html',
@@ -8,26 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class LivroComponent implements OnInit {
 
   private nome: string;
-  private autor: string
+  private autor: string;
+  private categoria: string;
   private descricao: string;
-  private srcImagem: string; //src da imagem
+  private srcImagem: string; //url da imagem
   private quantPaginas: number;
 
-  constructor () {
-    this.nome = "As Crônicas de Nárnia"
-    this.autor = "C. S. Lewis"
-    this.descricao = "Livro volume único"
-    this.srcImagem = "https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=10293250&qld=90&l=430&a=-1"
-    this.quantPaginas = 700;
+  constructor(form: FormularioLivroService) { 
+    form
   }
-
-  // constructor (nome: string, descricao: string, srcImagem: string, quantPaginas: number) {
-  //   this.nome = nome;
-  //   this.descricao = descricao;
-  //   this.srcImagem = srcImagem;
-  //   this.quantPaginas = quantPaginas;
-
-  // }
 
   get getNome(): string {
     return this.nome;
@@ -43,6 +34,14 @@ export class LivroComponent implements OnInit {
     this.autor = autor;
   }
 
+  get getCategoria() {
+    return this.categoria;
+  }
+
+  set setCategoria(categoria: string) {
+    this.categoria = categoria;
+  }
+
   get getDescricao(): string {
     return this.descricao;
   }
@@ -56,7 +55,7 @@ export class LivroComponent implements OnInit {
   set setQuantPaginas(quantPaginas: number) {
     this.quantPaginas = quantPaginas;
   }
-  
+
   get getSrcImagem(): string {
     return this.srcImagem;
   }
