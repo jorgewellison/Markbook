@@ -20,6 +20,10 @@ import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
 import { LivroComponent } from './livro/livro.component';
 import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
 import { LoggedGuard } from './logged.guard';
+import { NovolivroComponent } from './novolivro/novolivro.component';
+import { DetalheslivroComponent } from './detalheslivro/detalheslivro.component';
+import { EditarLivroComponent } from './editar-livro/editar-livro.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { LoggedGuard } from './logged.guard';
     ExibeLivrosComponent,
     LivroComponent,
     UploadFileComponent,
-    NavComponent
+    NavComponent,
+    NovolivroComponent,
+    DetalheslivroComponent,
+    EditarLivroComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,
