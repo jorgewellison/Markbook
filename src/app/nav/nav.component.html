@@ -1,19 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="collapse navbar-collapse" id="navbarNav">
+<nav class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center">
+  <div class="col-md-8 collapse navbar-collapse justify-content-between" id="navbarText">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['']">HOME</a>
+        <a class="nav-link" [routerLink]="['dashboard']">PAGINA INICIAL</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['']">QUEM SOMOS</a>
+        <a class="nav-link" href="mailto:bookmarkufpb@gmail.com">CONTATO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['']">CONTATO</a>
-      </li>
-      <li class="nav-item" *ngIf="logged">
-        <a class="nav-link" [routerLink]="['']">LIVROS PÚBLICOS</a>
+        <a class="nav-link">LIVROS PÚBLICOS</a>
       </li>
     </ul>
-    <app-upload-file *ngIf="logged"></app-upload-file>
+    <app-upload-file></app-upload-file>
   </div>
 </nav>

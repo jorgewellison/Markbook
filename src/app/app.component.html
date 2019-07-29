@@ -1,4 +1,7 @@
 <app-header></app-header>
+<nav *ngIf="mostrarNav">
+  <app-nav></app-nav>
+</nav>
 <div class="principal">
   <router-outlet></router-outlet>
 </div>

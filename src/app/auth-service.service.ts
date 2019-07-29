@@ -1,22 +1,27 @@
 import { Injectable } from "@angular/core";
 import { Router } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: "root"
 })
 export class AuthServiceService {
 
+  private usuarioAutenticado : boolean = false;
+  mostrarNavEmitter = new EventEmitter<boolean>();
+
  constructor(private router: Router) {
 
   }
-  fazerLogin(usuario: string, senha: string) : boolean {
+  fazerLogin(usuario: string, senha: string) : any {
     if (usuario === 'usuario@email.com' && senha === '123456') {
       localStorage.setItem('username', 'Usuario');
+      this.mostrarNavEmitter.emit(true);
       this.router.navigate(['dashboard']);
-      return true;
+      this.usuarioAutenticado = true;
     } else {
-      return false;
+      this.usuarioAutenticado = false;
     }
   }
 
