@@ -19,7 +19,6 @@ import { LivroComponent } from './livro/livro.component';
 import { FormularioLivroComponent } from './formulario-livro/formulario-livro.component';
 import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
 import { LoggedGuard } from './logged.guard';
-import { FormularioLivroService } from './formulario-livro/formulario-livro.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +42,6 @@ import { FormularioLivroService } from './formulario-livro/formulario-livro.serv
   providers: [
     AuthServiceService,
     LoggedGuard,
-    FormularioLivroService
   ],
   bootstrap: [AppComponent]
 })

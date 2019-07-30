@@ -1,15 +1,8 @@
-<div>
-  <!-- interpolação -->
-  <div>
-    <h1>{{ nome }}</h1>
-    <h2>{{ autor }}</h2>
-    <h3>{{ categoria }}</h3>
-    <p>{{ quantPaginas }} páginas</p>
-    <p>{{ descricao }}</p>
+<a href="">
+  <div class="img-box">
+    <img width="172" height="274"
+    [src]="srcImagem" [alt]="nome">
   </div>
-  <!-- ou bind.src -->
-  <!-- property binding -->
-  <img [src]="srcImagem">
-</div>
-
-<!-- adicionar categoria? -->
+  <h3 class="title">{{ nome }}</h3>
+  <h5 class="author">{{ autor }}</h5>
+</a>

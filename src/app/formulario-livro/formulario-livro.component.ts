@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormularioLivroService } from './formulario-livro.service';
 
 @Component({
   selector: 'app-formulario-livro',
@@ -7,27 +6,21 @@ import { FormularioLivroService } from './formulario-livro.service';
   styleUrls: ['./formulario-livro.component.css']
 })
 export class FormularioLivroComponent implements OnInit {
+nome: string;
+autor: string;
+srcImagem: string;
 
-  constructor(private form: FormularioLivroService) { 
-    
-  }
-  setLivro(nome: string, autor: string, categoria: string, 
-    descricao: string, urlImagem: string, quantPaginas: number) {
-    
-    this.form.getLivro.setNome = nome;
+  constructor() { 
     
   }
 
-  // setLivro(nome: string, autor: string, categoria: string,
-  //   descricao: string, srcImagem: string, quantPaginas: number) {
-
-  //   this.livro.setNome = nome;
-  //   this.livro.setAutor = autor;
-  //   this.livro.setCategoria = categoria;
-  //   this.livro.setDescricao = descricao;
-  //   this.livro.setSrcImagem = srcImagem;
-  //   this.livro.setQuantPaginas = quantPaginas;
-  // }
+criarLivro(nome: string, autor: string, srcImagem: string) {
+  this.nome = nome;
+  this.autor = autor;
+  this.srcImagem = srcImagem;
+    
+  alert('Livro enviado com sucesso!'); //Fazer alguma validação aqui!
+}
 
   ngOnInit() { }
 
