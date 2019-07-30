@@ -10,6 +10,15 @@ export class NavComponent implements OnInit {
 
   constructor(public AuthService : AuthServiceService) { }
 
+  logado() : boolean{
+    if (this.AuthService.usuarioAutenticado){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
   ngOnInit() {
   }
 }

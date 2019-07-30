@@ -41,6 +41,8 @@
 
 .list-group #sair {
   background: #cf1d3b;
+  margin: 5px;
+  border-radius: 10px;
 }
 
 .perfil h3 {

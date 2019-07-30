@@ -1,0 +1,11 @@
+.navbar{
+  width: 100%;
+}
+
+li{
+  margin-right: 40px;
+}
+
+nav{
+  color: gray;
+}

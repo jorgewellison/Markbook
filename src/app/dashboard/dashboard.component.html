@@ -8,7 +8,7 @@
       <a class="list-group-item" [routerLink]="[]">Seguindo</a>
       <a class="list-group-item" [routerLink]="[]">Seguidores</a>
       <!---<a *ngIf="authService.getUser()" class="list-group-item" [routerLink]="['']" id="sair">Sair</a>-->
-      <a class="list-group-item" [routerLink]="['']" id="sair">Sair</a>
+      <button class="list-group-item" (click)='logout()' id="sair">Sair</button>
     </ul>
   </div>
   <div class="timeline-publica">

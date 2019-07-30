@@ -1,0 +1,74 @@
+<form action="">
+  <h3>Preencha os dados e adicione o livro</h3>
+
+  <div class="">
+    <label for="nome-livro">Nome do livro:</label>
+    <input type="text" name="nome-livro" id="nome-livro" #nomeLivro>
+  </div>
+
+  <div>
+    <label for="autor-livro">Nome do autor:</label>
+    <input type="text" name="autor-livro" id="autor-livro" #autorLivro>
+  </div>
+
+  <div>
+    <label for="imagemLivro">Cole aqui uma URL válida com a imagem da capa do livro</label>
+    <input type="text" name="imagemLivro" id="imagemLivro" #imagemLivro>
+  </div>
+
+  <div>
+  <button (click)="criarLivro(nomeLivro.value, 
+  autorLivro.value, imagemLivro.value)">Enviar livro
+  </button>
+  </div>
+  
+  <!-- '#' é usado para criar uma variável local! -->
+
+  <p>{{ nome }}</p>
+  <p>{{ autor }}</p>
+  <img [src]="srcImagem">
+</form>
+ 
+<!-- <div>
+  <label for="categorias2">Categoria</label>
+  <select name="categorias2">
+    <option value="Selecione uma categoria" selected>Selecione aqui</option>
+    <option value="Ficcão Científica" #novaCategoria>Ficção Científica</option>
+    <option value="Literatua Nacional" #novaCategoria>Literatua Nacional</option>
+    <option value="Românce" #novaCategoria>Românce</option>
+    <option value="Fantasia" #novaCategoria>Fantasia</option>
+    <option value="Quadrinhos" #novaCategoria>Quadrinhos</option>
+    <option value="Religião e Espiritualidade" #novaCategoria>Religião e Espiritualidade</option>
+  </select>
+</div> -->
+ 
+<!-- <div>
+  <label for="descricaoLivro">Descrição:</label>
+  <textarea name="descricaoLivro" id="descricaoLivro" 
+  rows="5" cols="40" maxlength="30" #novaDescricao></textarea>
+</div> -->
+
+<!-- <div>
+  <label for="paginas">Quantidade de páginas</label>
+  <input type="number" name="paginas" id="paginas" #novaQuantPaginas> 
+</div> -->
+<!-- <label for="categorias">Selecione uma categoria</label>
+  <div name="categorias" id=categorias>
+    <label for="categ-ficcao-cientifica">Ficção Científica</label>
+    <input type="checkbox" name="categ-ficcao-cientifica" #novaCategoria></br>
+
+    <label for="categ-literatura">Literatura Nacional</label>
+    <input type="checkbox" name="categ-literatura" #novaCategoria></br>
+
+    <label for="categ-romance">Românce</label>
+    <input type="checkbox" name="categ-romance" #novaCategoria></br>
+
+    <label for="categ-fantasia">Fantasia</label>
+    <input type="checkbox" name="categ-fantasia" #novaCategoria></br>
+
+    <label for="categ-quadrinhos">Quadrinhos</label>
+    <input type="checkbox" name="categ-quadrinhos" #novaCategoria></br>
+
+    <label for="categ-espiritualidade">Religião e espiritualidade</label>
+    <input type="checkbox" name="categ-espiritualidade" #novaCategoria></br>
+  </div> -->

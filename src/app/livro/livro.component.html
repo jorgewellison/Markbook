@@ -1,12 +1,27 @@
-<div class="card-body">
-  <!-- interpolação -->
-  <div class="card-text">
-    <h1 class="">{{ nome }}</h1>
-    <h2>{{ autor }}</h2>
-    <p class="">{{ quantPaginas }} páginas</p>
-    <p class="">{{ descricao }}</p>
+<form action="">
+  <h3>Preencha os dados e adicione o livro</h3>
+
+  <div class="">
+    <label for="nome-livro">Nome do livro:</label>
+    <input type="text" name="nome-livro" id="nome-livro" #nomeLivro>
   </div>
-  <!-- ou bind.src -->
-  <!-- property binding -->
-  <img class="card-img" [src]="srcImagem"> 
-</div>
+
+  <div>
+    <label for="autor-livro">Nome do autor:</label>
+    <input type="text" name="autor-livro" id="autor-livro" #autorLivro>
+  </div>
+
+  <div>
+    <label for="imagemLivro">Cole aqui uma URL para a capa:</label>
+    <input type="text" name="imagemLivro" id="imagemLivro" #imagemLivro>
+  </div>
+
+  <div>
+  <button (click)="criarLivro(nomeLivro.value, 
+  autorLivro.value, imagemLivro.value)">Enviar livro</button>
+  </div>
+
+  <p>{{ nome }}</p>
+  <p>{{ autor }}</p>
+  <img [src]="srcImagem">
+</form>
