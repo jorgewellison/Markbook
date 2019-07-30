@@ -25,16 +25,12 @@
             <button type="submit" class="btn btn-primary" (click)="fazerLogin(usuario.value, senha.value)">Login</button>
           </p>
 
-
           <div class="alert alert-danger" role="alert" *ngIf="message">
               {{ message }}
             </div>
 
-          <p>
-            Ainda não é cadastrado?
-          </p>
-
           <p class="link">
+            Ainda não é cadastrado?
             <a href="#paracadastro">Cadastre-se</a>
           </p>
         </form>
@@ -60,7 +56,7 @@
           </p>
 
           <p>
-            <input type="submit" value="Cadastrar" />
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
           </p>
 
           <p class="link">

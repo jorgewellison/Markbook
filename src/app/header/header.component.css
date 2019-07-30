@@ -55,6 +55,7 @@ a {
 .navbar-nav {
   float: left;
   padding: 18px;
+  margin-left: -95px;
 }
 
 
