@@ -20,4 +20,8 @@ export class NovoLivroComponent implements OnInit {
     this.router.navigate(['dashboard/livros']);
   }
 
+  novoLivro(nome: string, autor: string) {
+    this.livroService.livros.push(new Livro(nome, autor));
+  }
+
 }

@@ -19,7 +19,7 @@
   <app-upload-file></app-upload-file>
 
   <div>
-    <button type="submit" id="criar_livro_botão">Criar livro</button>
+    <button (click)="novoLivro(nomeLivro.value, autorLivro.value)" type="submit" id="criar_livro_botão">Criar livro</button>
   </div>
 
   <a [routerLink]="['/dashboard']">Voltar</a>

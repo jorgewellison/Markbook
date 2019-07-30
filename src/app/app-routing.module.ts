@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'upload', loadChildren: './upload-file/upload-file.module#UploadFileModule'},
   { path: 'dashboard/livros', component: ListaDeLivrosComponent},
   { path: 'dashboard/livros/novo', component: NovoLivroComponent},
-  { path: 'dashboard/livro:id', component: MostrarLivroComponent},
   { path: 'dashboard/livro:id/edit', component: EditarLivroComponent},
 ];
 

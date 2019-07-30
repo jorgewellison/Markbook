@@ -88,3 +88,7 @@
 .cards .text-white{
   border-radius: 12px;
 }
+
+.pagination{
+  margin-top: 20px;
+}
