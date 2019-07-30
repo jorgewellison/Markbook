@@ -8,13 +8,13 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let livro of getLivros">
+    <tr *ngFor="let livro of getLivros()">
       <td>{{livro.nome}}</td>
       <td>{{livro.autor}}</td>
-      <td><a [routerLink]="['/dashboard', livro.id]">Mostrar</a></td>
-      <td><a [routerLink]="['/dashboard', livro.id, 'edit']">Editar</a></td>
-      <td><a data-confirm="Você tem certeza?" rel="nofollow" data-method="delete" [routerLink]="['/dashboard', livro.id]">
-        Destruir</a></td>
+      <td><a [routerLink]="['/dashboard/livro:id']">Mostrar</a></td>
+      <td><a [routerLink]="['/dashboard/livro:id/edit']">Editar</a></td>
+      <td><a data-confirm="Você tem certeza?" rel="nofollow" data-method="delete" [routerLink]="[]">
+        Deletar</a></td>
     </tr>
   </tbody>
 </table>
