@@ -18,19 +18,27 @@ export class LivroComponent implements OnInit {
     
   }
 
-  get getNome(): string {
-    return this.nome;
-  }
-  set setNome(nome: string) {
+  criarLivro(nome: string, autor: string, srcImagem: string) {
     this.nome = nome;
+    this.autor = autor;
+    this.srcImagem = srcImagem;
+
+    alert('Livro enviado com sucesso!');
   }
 
-  get getAutor(): string {
-    return this.autor;
-  }
-  set setAutor(autor: string) {
-    this.autor = autor;
-  }
+  // get getNome(): string {
+  //   return this.nome;
+  // }
+  // set setNome(nome: string) {
+  //   this.nome = nome;
+  // }
+
+  // get getAutor(): string {
+  //   return this.autor;
+  // }
+  // set setAutor(autor: string) {
+  //   this.autor = autor;
+  // }
 
   // get getCategoria() {
   //   return this.categoria;
@@ -54,12 +62,12 @@ export class LivroComponent implements OnInit {
   //   this.quantPaginas = quantPaginas;
   // }
 
-  get getSrcImagem(): string {
-    return this.srcImagem;
-  }
-  set setSrcImagem(srcImagem: string) {
-    this.srcImagem = srcImagem;
-  }
+  // get getSrcImagem(): string {
+  //   return this.srcImagem;
+  // }
+  // set setSrcImagem(srcImagem: string) {
+  //   this.srcImagem = srcImagem;
+  // }
 
   ngOnInit() {
   }
