@@ -21,6 +21,7 @@ import { NovoLivroComponent } from './livro/novo-livro/novo-livro.component';
 import { MostrarLivroComponent } from './livro/mostrar-livro/mostrar-livro.component';
 import { EditarLivroComponent } from './livro/editar-livro/editar-livro.component';
 import { AuthGuardService } from './guards/auth.guard';
+import { PgLeituraComponent } from './pg-leitura/pg-leitura/pg-leitura.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AuthGuardService } from './guards/auth.guard';
     ListaDeLivrosComponent,
     NovoLivroComponent,
     MostrarLivroComponent,
-    EditarLivroComponent
+    EditarLivroComponent,
+    PgLeituraComponent
   ],
   imports: [
     BrowserModule,
