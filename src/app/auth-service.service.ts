@@ -8,8 +8,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class AuthServiceService {
 
-  private usuarioAutenticado : boolean = false;
+  public usuarioAutenticado : boolean = false;
   mostrarNavEmitter = new EventEmitter<boolean>();
+  ocultarNavEmitter = new EventEmitter<boolean>();
 
  constructor(private router: Router) {
 
@@ -25,7 +26,10 @@ export class AuthServiceService {
     }
   }
 
-  logout() : any { localStorage.removeItem('username');}
+  logout() : any {
+    localStorage.removeItem('username');
+    this.ocultarNavEmitter.emit(true);
+  }
   getUser() : any { return localStorage.getItem('username');}
   logado(): boolean { return this.getUser() !== null;}
 

@@ -10,14 +10,20 @@ export class AppComponent {
   title = 'bookmark';
 
   mostrarNav : boolean = false;
+  ocultarNav : boolean = false;
 
   constructor(private authService: AuthServiceService){
 
   }
 
+
+
   ngOnInit(){
     this.authService.mostrarNavEmitter.subscribe(
       mostrar => this.mostrarNav = mostrar
+    );
+    this.authService.ocultarNavEmitter.subscribe(
+      ocultar => this.ocultarNav = ocultar
     );
   }
 }
