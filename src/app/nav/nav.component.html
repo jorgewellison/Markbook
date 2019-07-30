@@ -14,11 +14,8 @@
         <a class="nav-link" href="mailto:bookmarkufpb@gmail.com">CONTATO</a>
       </li>
       <li *ngIf='logado()' class="nav-item">
-        <a class="nav-link">LIVROS PÚBLICOS</a>
+        <a class="nav-link" [routerLink]="['dashboard/livros']">LIVROS PÚBLICOS</a>
       </li>
     </ul>
-    <a *ngIf='logado()' class="nav-item">
-      <app-upload-file></app-upload-file>
-    </a>
   </div>
 </nav>

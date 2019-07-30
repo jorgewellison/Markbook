@@ -3,7 +3,7 @@
 
   <div>
     <label for="nome-livro">Nome do livro:</label>
-    <input type="text" name="name" id="nome_livro" #nomeLivro>
+    <input type="text" name="nome" id="nome_livro" #nomeLivro>
   </div>
 
   <div>
@@ -16,8 +16,10 @@
     <input type="text" name="imagemLivro" id="imagemLivro" #imagemLivro>
   </div>
 
+  <app-upload-file></app-upload-file>
+
   <div>
-    <button type="submit" id="criar_livro_botão">Criar livro</button>
+    <button (click)="novoLivro(nomeLivro.value, autorLivro.value)" type="submit" id="criar_livro_botão">Criar livro</button>
   </div>
 
   <a [routerLink]="['/dashboard']">Voltar</a>
