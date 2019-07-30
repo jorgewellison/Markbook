@@ -12,11 +12,10 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService]},
-  { path: 'home', component: HomeComponent},
-  { path: 'upload', loadChildren: './upload-file/upload-file.module#UploadFileModule', canActivate: [AuthGuardService]},
-  { path: 'livros', component: ListaDeLivrosComponent},
-  { path: 'livros/novo', component: NovoLivroComponent},
-  { path: 'livro/:id', component: MostrarLivroComponent},
+  { path: 'upload', loadChildren: './upload-file/upload-file.module#UploadFileModule'},
+  { path: 'dashboard/livros', component: ListaDeLivrosComponent},
+  { path: 'dashboard/livros/novo', component: NovoLivroComponent},
+  { path: 'dashboard/livro/:id', component: MostrarLivroComponent},
 ];
 
 @NgModule({

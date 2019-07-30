@@ -5,8 +5,8 @@
     <ul class="list-group">
       <a class="list-group-item" [routerLink]="[]">Editar perfil</a>
       <a class="list-group-item" [routerLink]="[]">Minha biblioteca</a>
-      <a class="list-group-item" [routerLink]="[]">Seguindo</a>
-      <a class="list-group-item" [routerLink]="[]">Seguidores</a>
+      <a class="list-group-item" [routerLink]="[]">Seguindo/Seguidores</a>
+      <a class="list-group-item" [routerLink]="['livros/novo']">Adicionar livro</a>
       <!---<a *ngIf="authService.getUser()" class="list-group-item" [routerLink]="['']" id="sair">Sair</a>-->
       <button class="list-group-item" (click)='logout()' id="sair">Sair</button>
     </ul>

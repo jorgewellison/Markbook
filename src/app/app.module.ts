@@ -14,7 +14,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { LivroComponent } from './livro/livro.component';
 import { FormularioLivroComponent } from './formulario-livro/formulario-livro.component';
 import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
 import { ListaDeLivrosComponent } from './livro/lista-de-livros/lista-de-livros.component';
@@ -30,7 +29,6 @@ import { AuthGuardService } from './guards/auth.guard';
     FooterComponent,
     HomeComponent,
     DashboardComponent,
-    LivroComponent,
     FormularioLivroComponent,
     UploadFileComponent,
     NavComponent,

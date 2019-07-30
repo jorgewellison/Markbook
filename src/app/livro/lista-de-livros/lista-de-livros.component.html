@@ -11,9 +11,9 @@
     <tr *ngFor="let livro of getLivros">
       <td>{{livro.nome}}</td>
       <td>{{livro.autor}}</td>
-      <td><a [routerLink]="['/livros', livro.id]">Mostrar</a></td>
-      <td><a [routerLink]="['/livros', livro.id, 'edit']">Editar</a></td>
-      <td><a data-confirm="Você tem certeza?" rel="nofollow" data-method="delete" [routerLink]="['/livros', livro.id]">
+      <td><a [routerLink]="['/dashboard', livro.id]">Mostrar</a></td>
+      <td><a [routerLink]="['/dashboard', livro.id, 'edit']">Editar</a></td>
+      <td><a data-confirm="Você tem certeza?" rel="nofollow" data-method="delete" [routerLink]="['/dashboard', livro.id]">
         Destruir</a></td>
     </tr>
   </tbody>
