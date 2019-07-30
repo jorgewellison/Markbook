@@ -17,5 +17,14 @@
         <a class="nav-link" [routerLink]="['dashboard/livros']">LIVROS PÚBLICOS</a>
       </li>
     </ul>
+    <a *ngIf='logado()' class="nav-item">
+      <app-upload-file></app-upload-file>
+    </a>
+    <a *ngIf='logado()' class="nav-item" [routerLink]="['/pg-leitura']">
+      <input style="display: none" >
+      <button style="background: transparent; border: 2px solid gray; color: gray; border-radius: 8px;" (click)="openBrowser()">
+          PÁGINA DE LEITURA
+      </button>
+    </a>
   </div>
 </nav>
