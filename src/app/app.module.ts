@@ -21,6 +21,7 @@ import { LoggedGuard } from './logged.guard';
 import { ListaDeLivrosComponent } from './livro/lista-de-livros/lista-de-livros.component';
 import { NovoLivroComponent } from './livro/novo-livro/novo-livro.component';
 import { MostrarLivroComponent } from './livro/mostrar-livro/mostrar-livro.component';
+import { EditarLivroComponent } from './livro/editar-livro/editar-livro.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MostrarLivroComponent } from './livro/mostrar-livro/mostrar-livro.compo
     NavComponent,
     ListaDeLivrosComponent,
     NovoLivroComponent,
-    MostrarLivroComponent
+    MostrarLivroComponent,
+    EditarLivroComponent
   ],
   imports: [
     BrowserModule,
