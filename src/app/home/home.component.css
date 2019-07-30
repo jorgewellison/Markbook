@@ -250,3 +250,30 @@ form{
   width: 30%;
   margin: 40px 60px;
 }
+
+/* Exibição de livros */
+.books-content {
+  text-align: center;
+  margin-top: 590px;
+  margin-bottom: 85px;
+}
+
+.books-unordened-list{
+  list-style-type: none;
+}
+
+.book-list {
+  display: inline-block;
+}
+
+.zoom {
+  height: 270px;
+  width: 200px;
+  margin: 20px;
+  transition: transform 0.5s;
+  /* display: block; */
+}
+
+.zoom:hover {
+  transform: scale(1.1, 1.1);
+}
