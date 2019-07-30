@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { FormularioLivroService } from '../formulario-livro/formulario-livro.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-livro',
@@ -11,57 +9,65 @@ export class LivroComponent implements OnInit {
 
   private nome: string;
   private autor: string;
-  private categoria: string;
-  private descricao: string;
+  // private categoria: string;
+  // private descricao: string;
   private srcImagem: string; //url da imagem
-  private quantPaginas: number;
+  // private quantPaginas: number;
 
-  constructor(form: FormularioLivroService) { 
-    form
+  constructor() { 
+    
   }
 
-  get getNome(): string {
-    return this.nome;
-  }
-  set setNome(nome: string) {
+  criarLivro(nome: string, autor: string, srcImagem: string) {
     this.nome = nome;
-  }
-
-  get getAutor(): string {
-    return this.autor;
-  }
-  set setAutor(autor: string) {
     this.autor = autor;
-  }
-
-  get getCategoria() {
-    return this.categoria;
-  }
-
-  set setCategoria(categoria: string) {
-    this.categoria = categoria;
-  }
-
-  get getDescricao(): string {
-    return this.descricao;
-  }
-  set setDescricao(descricao: string) {
-    this.descricao = descricao;
-  }
-
-  get getQuantPaginas(): number {
-    return this.quantPaginas;
-  }
-  set setQuantPaginas(quantPaginas: number) {
-    this.quantPaginas = quantPaginas;
-  }
-
-  get getSrcImagem(): string {
-    return this.srcImagem;
-  }
-  set setSrcImagem(srcImagem: string) {
     this.srcImagem = srcImagem;
+
+    alert('Livro enviado com sucesso!');
   }
+
+  // get getNome(): string {
+  //   return this.nome;
+  // }
+  // set setNome(nome: string) {
+  //   this.nome = nome;
+  // }
+
+  // get getAutor(): string {
+  //   return this.autor;
+  // }
+  // set setAutor(autor: string) {
+  //   this.autor = autor;
+  // }
+
+  // get getCategoria() {
+  //   return this.categoria;
+  // }
+
+  // set setCategoria(categoria: string) {
+  //   this.categoria = categoria;
+  // }
+
+  // get getDescricao(): string {
+  //   return this.descricao;
+  // }
+  // set setDescricao(descricao: string) {
+  //   this.descricao = descricao;
+  // }
+
+  // get getQuantPaginas(): number {
+  //   return this.quantPaginas;
+  // }
+  // set setQuantPaginas(quantPaginas: number) {
+  //   this.quantPaginas = quantPaginas;
+  // }
+
+  // get getSrcImagem(): string {
+  //   return this.srcImagem;
+  // }
+  // set setSrcImagem(srcImagem: string) {
+  //   this.srcImagem = srcImagem;
+  // }
 
   ngOnInit() {
   }

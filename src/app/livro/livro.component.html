@@ -1,15 +1,27 @@
-<div>
-  <!-- interpolação -->
-  <div>
-    <h1>{{ nome }}</h1>
-    <h2>{{ autor }}</h2>
-    <h3>{{ categoria }}</h3>
-    <p>{{ quantPaginas }} páginas</p>
-    <p>{{ descricao }}</p>
-  </div>
-  <!-- ou bind.src -->
-  <!-- property binding -->
-  <img [src]="srcImagem">
-</div>
+<form action="">
+  <h3>Preencha os dados e adicione o livro</h3>
 
-<!-- adicionar categoria? -->
+  <div class="">
+    <label for="nome-livro">Nome do livro:</label>
+    <input type="text" name="nome-livro" id="nome-livro" #nomeLivro>
+  </div>
+
+  <div>
+    <label for="autor-livro">Nome do autor:</label>
+    <input type="text" name="autor-livro" id="autor-livro" #autorLivro>
+  </div>
+
+  <div>
+    <label for="imagemLivro">Cole aqui uma URL para a capa:</label>
+    <input type="text" name="imagemLivro" id="imagemLivro" #imagemLivro>
+  </div>
+
+  <div>
+  <button (click)="criarLivro(nomeLivro.value, 
+  autorLivro.value, imagemLivro.value)">Enviar livro</button>
+  </div>
+
+  <p>{{ nome }}</p>
+  <p>{{ autor }}</p>
+  <img [src]="srcImagem">
+</form>
