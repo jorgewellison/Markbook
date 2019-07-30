@@ -33,6 +33,9 @@ export class AuthServiceService {
   getUser() : any { return localStorage.getItem('username');}
   logado(): boolean { return this.getUser() !== null;}
 
+  usuarioEstaAutenticado() {
+    return this.usuarioAutenticado;
+  }
 
 }
 

@@ -14,3 +14,7 @@ li{
 nav{
   color: gray;
 }
+
+.navbar-nav {
+  margin-left: -100px;
+}
