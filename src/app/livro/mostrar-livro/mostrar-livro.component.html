@@ -1,1 +1,15 @@
-<p>mostrar-livro works!</p>
+<div *ngIf="livro">
+  <p>
+    <strong>Nome:</strong>
+    {{livro.nome}}
+  </p>
+
+  <p>
+    <strong>Autor:</strong>
+    {{livro.autor}}
+  </p>
+  <a [routerLink]="['/livros', livro.id, 'edit']">Editar</a>
+  |
+  <a [routerLink]="['/livros']">Voltar</a>
+</div>
+<router-outlet></router-outlet>
