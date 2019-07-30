@@ -18,6 +18,7 @@ import { LivroComponent } from './livro/livro.component';
 import { FormularioLivroComponent } from './formulario-livro/formulario-livro.component';
 import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
 import { LoggedGuard } from './logged.guard';
+import { AuthGuardService } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { LoggedGuard } from './logged.guard';
   providers: [
     AuthServiceService,
     LoggedGuard,
+    AuthGuardService,
   ],
   bootstrap: [AppComponent]
 })
