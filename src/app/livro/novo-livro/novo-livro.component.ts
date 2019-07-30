@@ -1,4 +1,7 @@
+import { LivroService } from './../livro.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Livro } from '../livro';
 
 @Component({
   selector: 'app-novo-livro',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoLivroComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private livroService: LivroService) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(form: any){
+    this.livroService.add(new Livro(form.nome, form.autor));
+    this.router.navigate(['/livros']);
   }
 
 }
