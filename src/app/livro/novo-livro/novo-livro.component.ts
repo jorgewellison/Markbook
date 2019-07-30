@@ -16,12 +16,11 @@ export class NovoLivroComponent implements OnInit {
   }
 
   onSubmit(form: any){
-    this.livroService.add(new Livro(form.nome, form.autor));
     this.router.navigate(['dashboard/livros']);
   }
 
-  novoLivro(nome: string, autor: string) {
-    this.livroService.livros.push(new Livro(nome, autor));
+  novoLivro(nome: string, autor: string, imagem: string) {
+    this.livroService.livros.push(new Livro(nome, autor, imagem));
   }
 
 }
