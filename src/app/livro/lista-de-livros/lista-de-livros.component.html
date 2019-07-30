@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th id="nomeCabecalho">Nome do livro</th>
@@ -17,5 +17,18 @@
         Deletar</a></td>
     </tr>
   </tbody>
-</table>
+</table> -->
+
+<ul>
+  <li *ngFor="let livro of getLivros()">
+    <div class="imagem-cartao">
+      <a href="">
+        <img class=imagem [src]="livro.imagem">
+      </a>
+      <h3 class="titulo">{{ livro.nome }}</h3>
+      <h5 class="autor">{{ livro.autor }}</h5>
+    </div>
+  </li>
+</ul>
+
 <router-outlet></router-outlet>

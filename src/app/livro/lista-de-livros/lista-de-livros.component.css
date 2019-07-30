@@ -1,0 +1,36 @@
+ul {
+  list-style-type: none;
+  padding-inline-start: 0%;
+  text-align: left;
+}
+
+li {
+  display: inline-block;
+  margin: 45px;
+  text-align: center;
+}
+
+div {
+  height: 220px;
+  width: 150px;
+  /* background-color: black; */
+}
+
+img {
+  height: 220px;
+  width: 150px;
+}
+
+h3, h5 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-style: normal;  
+}
+
+h5 { 
+  font-size: 15px;
+  font-style: bold;
+}
