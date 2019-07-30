@@ -14,16 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CarrosselLivrosComponent } from './carrossel-livros/carrossel-livros.component';
-import { CarrosselLivrosService } from './carrossel-livros/carrossel-livros.service';
 import { ExibeLivrosComponent } from './exibe-livros/exibe-livros.component';
-import { LivroComponent } from './livro/livro.component';
 import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
 import { LoggedGuard } from './logged.guard';
-import { NovolivroComponent } from './novolivro/novolivro.component';
-import { DetalheslivroComponent } from './detalheslivro/detalheslivro.component';
-import { EditarLivroComponent } from './editar-livro/editar-livro.component';
-import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -32,15 +25,9 @@ import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
     FooterComponent,
     HomeComponent,
     DashboardComponent,
-    CarrosselLivrosComponent,
     ExibeLivrosComponent,
-    LivroComponent,
     UploadFileComponent,
-    NavComponent,
-    NovolivroComponent,
-    DetalheslivroComponent,
-    EditarLivroComponent,
-    EditarPerfilComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +37,6 @@ import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
   ],
   providers: [
     AuthServiceService,
-    CarrosselLivrosService,
     LoggedGuard
   ],
   bootstrap: [AppComponent]
