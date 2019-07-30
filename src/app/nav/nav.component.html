@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light justify-content-center align-items-center">
   <div class="col-md-8 collapse navbar-collapse justify-content-between" id="navbarText">
     <ul class="navbar-nav">
-      <li *ngIf='!logado()'class="nav-item">
+      <li *ngIf='!logado()' class="nav-item">
         <a class="nav-link" [routerLink]="['']">PAGINA INICIAL</a>
       </li>
       <li *ngIf='logado()' class="nav-item">
@@ -17,6 +17,8 @@
         <a class="nav-link">LIVROS PÚBLICOS</a>
       </li>
     </ul>
-    <app-upload-file></app-upload-file>
+    <a *ngIf='logado()' class="nav-item">
+      <app-upload-file></app-upload-file>
+    </a>
   </div>
 </nav>
