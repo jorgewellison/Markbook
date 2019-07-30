@@ -1,0 +1,18 @@
+.card-body {
+  background-color: black;
+  text-align: center;
+  height: 200px;
+  width: 200px;
+
+}
+
+.card-text {
+  text-align: center;
+  color: yellow;
+
+}
+
+.card-img {
+  height: 200px;
+  width: 200px;
+}

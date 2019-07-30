@@ -1,15 +1,12 @@
-<div>
+<div class="card-body">
   <!-- interpolação -->
-  <div>
-    <h1>{{ nome }}</h1>
+  <div class="card-text">
+    <h1 class="">{{ nome }}</h1>
     <h2>{{ autor }}</h2>
-    <h3>{{ categoria }}</h3>
-    <p>{{ quantPaginas }} páginas</p>
-    <p>{{ descricao }}</p>
+    <p class="">{{ quantPaginas }} páginas</p>
+    <p class="">{{ descricao }}</p>
   </div>
   <!-- ou bind.src -->
   <!-- property binding -->
-  <img [src]="srcImagem">
+  <img class="card-img" [src]="srcImagem"> 
 </div>
-
-<!-- adicionar categoria? -->
