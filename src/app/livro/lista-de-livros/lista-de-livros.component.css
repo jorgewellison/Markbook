@@ -31,14 +31,18 @@ h3, h5 {
 
 h3 {
   font-size: 20px;
-  font-style: normal;  
+  font-style: normal;
 }
 
-h5 { 
+h5 {
   font-size: 15px;
   font-style: bold;
 }
 
 .exibicaoLivros{
-  margin-bottom: 110px;
+  margin-bottom: 120px;
+}
+
+.container{
+  height: 80vh;
 }

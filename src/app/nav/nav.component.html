@@ -16,9 +16,6 @@
       <li *ngIf='logado()' class="nav-item">
         <a class="nav-link" [routerLink]="['dashboard/livros']">LIVROS PÚBLICOS</a>
       </li>
-      <li *ngIf='logado()' class="nav-item">
-        <a class="nav-link" [routerLink]="['/pg-leitura']">PÁGINA DE LEITURA</a>
-      </li>
     </ul>
     <div *ngIf='logado()' class="row">
       <div class="col">

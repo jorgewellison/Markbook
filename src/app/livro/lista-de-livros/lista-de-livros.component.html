@@ -22,7 +22,7 @@
 <ul class="exibicaoLivros">
   <li *ngFor="let livro of getLivros()">
     <div class="imagem-cartao">
-      <a href="">
+      <a href=""[routerLink]="['/pg-leitura']">
         <img class=imagem [src]="livro.imagem">
       </a>
       <h3 class="titulo">{{ livro.nome }}</h3>
