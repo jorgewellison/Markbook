@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LivroService } from '../livro.service';
+
 @Component({
   selector: 'app-editar-livro',
   templateUrl: './editar-livro.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarLivroComponent implements OnInit {
 
-  constructor() { }
+  constructor(private editarLivro: LivroService) { }
 
   ngOnInit() {
   }
