@@ -10,10 +10,14 @@ li {
   text-align: center;
 }
 
-div {
+div .imagem-cartao {
   height: 220px;
   width: 150px;
   /* background-color: black; */
+}
+
+div .editar .deletar {
+  display: inline;
 }
 
 img {
@@ -33,11 +37,6 @@ h3 {
 h5 { 
   font-size: 15px;
   font-style: bold;
-}
-
-.container{
-  text-align: center;
-  margin: 110px;
 }
 
 .exibicaoLivros{

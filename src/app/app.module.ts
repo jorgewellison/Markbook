@@ -18,7 +18,6 @@ import { FormularioLivroComponent } from './formulario-livro/formulario-livro.co
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { ListaDeLivrosComponent } from './livro/lista-de-livros/lista-de-livros.component';
 import { NovoLivroComponent } from './livro/novo-livro/novo-livro.component';
-import { MostrarLivroComponent } from './livro/mostrar-livro/mostrar-livro.component';
 import { EditarLivroComponent } from './livro/editar-livro/editar-livro.component';
 import { AuthGuardService } from './guards/auth.guard';
 import { PgLeituraComponent } from './pg-leitura/pg-leitura/pg-leitura.component';
@@ -26,6 +25,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { EditarPerfilComponent } from './usuario/editar-perfil/editar-perfil.component';
 import { MinhaBibliotecaComponent } from './minha-biblioteca/minha-biblioteca.component';
 import { NovoUsuarioComponent } from './usuario/novo-usuario/novo-usuario.component';
+import { DeletarLivroComponent } from './livro/deletar-livro/deletar-livro.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +39,13 @@ import { NovoUsuarioComponent } from './usuario/novo-usuario/novo-usuario.compon
     NavComponent,
     ListaDeLivrosComponent,
     NovoLivroComponent,
-    MostrarLivroComponent,
     EditarLivroComponent,
     PgLeituraComponent,
     TimelineComponent,
     EditarPerfilComponent,
     MinhaBibliotecaComponent,
-    NovoUsuarioComponent
+    NovoUsuarioComponent,
+    DeletarLivroComponent
   ],
   imports: [
     BrowserModule,

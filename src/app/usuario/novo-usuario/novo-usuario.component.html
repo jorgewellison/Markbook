@@ -1,0 +1,20 @@
+<div id="cadastro">
+  <form method="post" action="">
+    <h2>Cadastro</h2>
+    <p>
+      <label for="nome_cad">Seu nome completo:</label><br>
+      <input id="nome_cad" name="nome_cad" required="required" type="text" #nomeUsuario/>
+    </p>
+    <p>
+      <label for="email_cad">Seu email:</label><br>
+      <input id="email_cad" name="email_cad" required="required" type="email" #emailUsuario/>
+    </p>
+    <p>
+      <label for="senha_cad">Sua senha:</label><br>
+      <input id="senha_cad" name="senha_cad" required="required" type="password" #senhaUsuario/>
+    </p>
+    <p>
+      <button (click)="novoUsuario(nomeUsuario.value, emailUsuario.value, senhaUsuario.value)" type="submit" class="btn btn-primary" [routerLink]="['dashboard']">Cadastrar</button>
+    </p>
+  </form>
+</div>

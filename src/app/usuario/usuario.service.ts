@@ -5,10 +5,15 @@ import { Usuario } from './usuario';
   providedIn: 'root'
 })
 export class UsuarioService {
+  ultimoId: number = 0;
   usuarios: Usuario[] = [];
 
-  adicionar() {
-    
+  adicionar(usuario: Usuario) {
+    if(usuario.id) {
+
+    }
+    this.usuarios.push(usuario);
+    // TODO: FAZER VALIDAÇÃO COM 'ID'
   }
 
   atualizar (usuario: Usuario) {
