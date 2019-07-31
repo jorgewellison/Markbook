@@ -1,0 +1,10 @@
+.container{
+    background-size: cover;
+    background: gray;
+    margin: 20px;
+    padding: 44px 15px;
+}
+
+.h3{
+    color:  rgb(30, 131, 131);
+}

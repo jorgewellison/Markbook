@@ -34,3 +34,12 @@ h5 {
   font-size: 15px;
   font-style: bold;
 }
+
+.container{
+  text-align: center;
+  margin: 110px;
+}
+
+.exibicaoLivros{
+  margin-bottom: 110px;
+}

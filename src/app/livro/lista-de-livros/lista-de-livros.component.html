@@ -19,7 +19,7 @@
   </tbody>
 </table> -->
 
-<ul>
+<ul class="exibicaoLivros">
   <li *ngFor="let livro of getLivros()">
     <div class="imagem-cartao">
       <a href="">
@@ -30,5 +30,11 @@
     </div>
   </li>
 </ul>
+
+<div *ngIf="listaVazia()" class="container">
+  <div>
+    Nâo existem livros cadastrados.
+  </div>
+</div>
 
 <router-outlet></router-outlet>
