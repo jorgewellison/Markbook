@@ -1,16 +1,20 @@
-<form>
-  <h3>Edite o perfil</h3>
-
-  <label for="nome">Seu nome completo</label>
-  <input type="text" name=nome #novoNomeUsuario>
-
-  <label for="email">Novo email</label>
-  <input type="text" name="email" #novoEmailUsuario> 
-
-  <label for="senha">Nova senha</label>
-  <input type="text" name="senha" #novaSenhaUsuario>
-
-  <button (click)="editarPerfil(novoNomeUsuario.value, 
-  novoEmailUsuario.value, novaSenhaUsuario.value)" 
-  type="submit">Salvar perfil</button>
-</form>
+<div class="container">
+  <form>
+    <h3>Edite o seu perfil</h3>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Endereço de email</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com"
+        #novoEmailUsuario>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Seu nome completo</label>
+      <input type="text" name="nome" class="form-control" id="exampleFormControlInput1" #novoNomeUsuario>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Sua nova senha</label>
+      <input type="password" name="senha" class="form-control" id="exampleFormControlInput1" #novaSenhaUsuario>
+    </div>
+    <button (click)="editarPerfil(novoNomeUsuario.value, 
+  novoEmailUsuario.value, novaSenhaUsuario.value)" type="submit">Salvar perfil</button>
+  </form>
+</div>

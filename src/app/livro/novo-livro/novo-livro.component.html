@@ -1,5 +1,5 @@
 <!-- <form #f="ngForm" (ngSubmit)="onSubmit(f.value)"> -->
-<form> 
+<form>
   <h3>Preencha os dados e adicione o livro</h3>
 
   <div>
@@ -20,8 +20,10 @@
   <app-upload-file></app-upload-file>
 
   <div>
-    <button (click)="novoLivro(nomeLivro.value, autorLivro.value, imagemLivro.value)" type="submit" id="criar_livro_botão">Criar livro</button>
+    <button (click)="novoLivro(nomeLivro.value, autorLivro.value, imagemLivro.value)" type="submit"
+      id="criar_livro_botão">Criar livro</button>
   </div>
 
   <a [routerLink]="['/dashboard']">Voltar</a>
-  <router-outlet></router-outlet>
+</form>
+<router-outlet></router-outlet>

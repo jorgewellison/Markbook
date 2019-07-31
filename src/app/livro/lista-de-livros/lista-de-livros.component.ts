@@ -15,6 +15,10 @@ export class ListaDeLivrosComponent implements OnInit {
   getLivros(): Livro[] {
     return this.service.getLivros();
   }
+
+  listaVazia() : boolean{
+    return this.service.listaVazia();
+  }
   
   ngOnInit() {
   }

@@ -36,6 +36,12 @@ export class LivroService {
     return this.livros;
   }
 
+  listaVazia() : boolean{
+    if (this.livros.length == 0){
+      return true;
+    }
+  }
+
   getById(id: number): Livro{
     return this.livros.filter(todo => todo.id === id).pop();
   }
