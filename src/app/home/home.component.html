@@ -12,22 +12,23 @@
       <div id="login">
         <h2>Login</h2>
         <form #f="ngForm" method="post" action="">
-            <p>
-                <label class="active" for="email">Email</label><br>
-                <input id="email" name="email" type="email" class="validate" #usuario>
-              </p>
-
-              <p>
-                <label class="active" for="senha">Senha</label><br>
-                <input id="senha" name="senha" type="password" class="validate" #senha>
-              </p>
           <p>
-            <button type="submit" class="btn btn-primary" (click)="fazerLogin(usuario.value, senha.value)">Login</button>
+            <label class="active" for="email">Email</label><br>
+            <input id="email" name="email" type="email" class="validate" #usuario>
+          </p>
+
+          <p>
+            <label class="active" for="senha">Senha</label><br>
+            <input id="senha" name="senha" type="password" class="validate" #senha>
+          </p>
+          <p>
+            <button type="submit" class="btn btn-primary"
+              (click)="fazerLogin(usuario.value, senha.value)">Login</button>
           </p>
 
           <div class="alert alert-danger" role="alert" *ngIf="message">
-              {{ message }}
-            </div>
+            {{ message }}
+          </div>
 
           <p class="link">
             Ainda não é cadastrado?
@@ -42,21 +43,21 @@
 
           <p>
             <label for="nome_cad">Seu nome completo:</label><br>
-            <input id="nome_cad" name="nome_cad" required="required" type="text"/>
+            <input id="nome_cad" name="nome_cad" required="required" type="text" />
           </p>
 
           <p>
             <label for="email_cad">Seu email:</label><br>
-            <input id="email_cad" name="email_cad" required="required" type="email"/>
+            <input id="email_cad" name="email_cad" required="required" type="email" />
           </p>
 
           <p>
             <label for="senha_cad">Sua senha:</label><br>
-            <input id="senha_cad" name="senha_cad" required="required" type="password"/>
+            <input id="senha_cad" name="senha_cad" required="required" type="password" />
           </p>
 
           <p>
-              <button type="submit" class="btn btn-primary" [routerLink]="['dashboard']">Cadastrar</button>
+            <button type="submit" class="btn btn-primary" [routerLink]="['dashboard']">Cadastrar</button>
           </p>
 
           <p class="link">
@@ -72,16 +73,22 @@
   <div class="books-content">
     <ul class="books-unordened-list">
       <li class="book-list">
-        <img class="zoom" src="https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=10293250&qld=90&l=430&a=-1" alt="As Crônicas de Narnia (Volume Único) - C. S. Lewis">
+        <img class="zoom"
+          src="https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=10293250&qld=90&l=430&a=-1"
+          alt="As Crônicas de Narnia (Volume Único) - C. S. Lewis">
       </li>
       <li class="book-list">
-        <img class="zoom" src="https://http2.mlstatic.com/livro-a-queda-de-gondolin-j-r-r-tolkien-capa-dura-D_NQ_NP_931552-MLB28154733145_092018-F.jpg" alt="Livro A Queda De Gondolin - J. R. R. Tolkien ">
+        <img class="zoom"
+          src="https://http2.mlstatic.com/livro-a-queda-de-gondolin-j-r-r-tolkien-capa-dura-D_NQ_NP_931552-MLB28154733145_092018-F.jpg"
+          alt="Livro A Queda De Gondolin - J. R. R. Tolkien ">
       </li>
       <li class="book-list">
-        <img class="zoom" src="https://images.foyles.co.uk/large/books/img/9/7/2/9789722325332.jpg" alt="Harry Potter e a Pedra Filosofal - J. K. Rowling">
+        <img class="zoom" src="https://images.foyles.co.uk/large/books/img/9/7/2/9789722325332.jpg"
+          alt="Harry Potter e a Pedra Filosofal - J. K. Rowling">
       </li>
       <li class="book-list">
-        <img class="zoom" src="https://images-na.ssl-images-amazon.com/images/I/51WR6fehD%2BL.jpg" alt="Herry Potter e o Enigma do Príncipe - J. K. Rowling">
+        <img class="zoom" src="https://images-na.ssl-images-amazon.com/images/I/51WR6fehD%2BL.jpg"
+          alt="Herry Potter e o Enigma do Príncipe - J. K. Rowling">
       </li>
     </ul>
   </div>
