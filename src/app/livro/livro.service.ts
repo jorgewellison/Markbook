@@ -12,18 +12,18 @@ export class LivroService {
 
   constructor() { }
 
-  add(livro: Livro){
+  adicionar(livro: Livro){
     if(!livro.id){
       livro.id = ++this.ultimoId;
     }
     this.livros.push(livro);
   }
 
-  delete(id: number){
+  deletar(id: number){
     this.livros = this.livros.filter(todo => todo.id !== id);
   }
 
-  update(novoLivro: Livro) : Livro {
+  atualizar(novoLivro: Livro): Livro {
     const velhoLivro = this.getById(novoLivro.id);
     if (!velhoLivro){
       return;
@@ -32,7 +32,7 @@ export class LivroService {
     return velhoLivro;
   }
 
-  getAll(): Livro[]{
+  getLivros(): Livro[]{
     return this.livros;
   }
 

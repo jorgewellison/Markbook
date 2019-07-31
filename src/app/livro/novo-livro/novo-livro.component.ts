@@ -15,12 +15,9 @@ export class NovoLivroComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(form: any){
-    this.router.navigate(['dashboard/livros']);
-  }
-
   novoLivro(nome: string, autor: string, imagem: string) {
     this.livroService.livros.push(new Livro(nome, autor, imagem));
+    this.router.navigate(['dashboard/livros']);
   }
 
 }
