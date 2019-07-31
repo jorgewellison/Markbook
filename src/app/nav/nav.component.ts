@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  router: any;
 
   constructor(public AuthService : AuthServiceService) { }
 
@@ -17,6 +18,11 @@ export class NavComponent implements OnInit {
     else{
       return false;
     }
+  }
+
+  logout(){
+    this.AuthService.usuarioAutenticado = false;
+    this.AuthService.logout();
   }
 
   ngOnInit() {

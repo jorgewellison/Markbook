@@ -15,13 +15,16 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormularioLivroComponent } from './formulario-livro/formulario-livro.component';
-import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 import { ListaDeLivrosComponent } from './livro/lista-de-livros/lista-de-livros.component';
 import { NovoLivroComponent } from './livro/novo-livro/novo-livro.component';
 import { MostrarLivroComponent } from './livro/mostrar-livro/mostrar-livro.component';
 import { EditarLivroComponent } from './livro/editar-livro/editar-livro.component';
 import { AuthGuardService } from './guards/auth.guard';
 import { PgLeituraComponent } from './pg-leitura/pg-leitura/pg-leitura.component';
+import { TimelineComponent } from './timeline/timeline.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
+import { MinhaBibliotecaComponent } from './minha-biblioteca/minha-biblioteca.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { PgLeituraComponent } from './pg-leitura/pg-leitura/pg-leitura.component
     NovoLivroComponent,
     MostrarLivroComponent,
     EditarLivroComponent,
-    PgLeituraComponent
+    PgLeituraComponent,
+    TimelineComponent,
+    EditarPerfilComponent,
+    MinhaBibliotecaComponent
   ],
   imports: [
     BrowserModule,

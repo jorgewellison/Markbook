@@ -16,15 +16,27 @@
       <li *ngIf='logado()' class="nav-item">
         <a class="nav-link" [routerLink]="['dashboard/livros']">LIVROS PÚBLICOS</a>
       </li>
+      <li *ngIf='logado()' class="nav-item">
+        <a class="nav-link" [routerLink]="['/pg-leitura']">PÁGINA DE LEITURA</a>
+      </li>
     </ul>
-    <a *ngIf='logado()' class="nav-item">
-      <app-upload-file></app-upload-file>
-    </a>
-    <a *ngIf='logado()' class="nav-item" [routerLink]="['/pg-leitura']">
-      <input style="display: none" >
-      <button style="background: transparent; border: 2px solid gray; color: gray; border-radius: 8px;" (click)="openBrowser()">
-          PÁGINA DE LEITURA
-      </button>
-    </a>
+    <div *ngIf='logado()' class="row">
+      <div class="col">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            <img width="50" height="50"
+          src="https://pbs.twimg.com/profile_images/1035645896640405504/Mb5KTYhM_400x400.jpg"
+          alt="share">
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem [routerLink]="['/dashboard/editar-perfil']">Editar perfil</button>
+            <button ngbDropdownItem [routerLink]="['/dashboard/minha-biblioteca']">Minha biblioteca</button>
+            <button ngbDropdownItem>Seguindo / Seguidores</button>
+            <button ngbDropdownItem [routerLink]="['/dashboard/livros/novo']">Adicionar livro</button>
+            <button ngbDropdownItem (click)='logout()' id='sair' [routerLink]="['']">Sair</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </nav>
