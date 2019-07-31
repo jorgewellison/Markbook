@@ -1,20 +1,36 @@
-.navbar{
+.navbar {
   width: 100%;
 }
 
-.collapse{
+.collapse {
   margin-left: 45px;
   position: relative;
 }
 
-li{
+li {
   margin-left: 40px;
+  list-style-type: none;
 }
 
-nav{
+nav {
   color: gray;
 }
 
 .navbar-nav {
   margin-left: -100px;
+}
+
+.btn-outline-primary {
+  background: transparent;
+  border: none;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+button:hover{
+  background-color: rgb(30, 131, 131);
+}
+
+.dropdown img {
+  border-radius: 25px;
 }
