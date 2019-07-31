@@ -1,5 +1,5 @@
 import { MinhaBibliotecaComponent } from './minha-biblioteca/minha-biblioteca.component';
-import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
+import { EditarPerfilComponent } from './usuario/editar-perfil/editar-perfil.component';
 import { EditarLivroComponent } from './livro/editar-livro/editar-livro.component';
 import { NovoLivroComponent } from './livro/novo-livro/novo-livro.component';
 import { HomeComponent } from './home/home.component';

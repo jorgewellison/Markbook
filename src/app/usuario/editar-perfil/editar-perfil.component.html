@@ -1,0 +1,16 @@
+<form>
+  <h3>Edite o perfil</h3>
+
+  <label for="nome">Seu nome completo</label>
+  <input type="text" name=nome #novoNomeUsuario>
+
+  <label for="email">Novo email</label>
+  <input type="text" name="email" #novoEmailUsuario> 
+
+  <label for="senha">Nova senha</label>
+  <input type="text" name="senha" #novaSenhaUsuario>
+
+  <button (click)="editarPerfil(novoNomeUsuario.value, 
+  novoEmailUsuario.value, novaSenhaUsuario.value)" 
+  type="submit">Salvar perfil</button>
+</form>
