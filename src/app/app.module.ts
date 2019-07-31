@@ -23,8 +23,9 @@ import { EditarLivroComponent } from './livro/editar-livro/editar-livro.componen
 import { AuthGuardService } from './guards/auth.guard';
 import { PgLeituraComponent } from './pg-leitura/pg-leitura/pg-leitura.component';
 import { TimelineComponent } from './timeline/timeline.component';
-import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
+import { EditarPerfilComponent } from './usuario/editar-perfil/editar-perfil.component';
 import { MinhaBibliotecaComponent } from './minha-biblioteca/minha-biblioteca.component';
+import { NovoUsuarioComponent } from './usuario/novo-usuario/novo-usuario.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MinhaBibliotecaComponent } from './minha-biblioteca/minha-biblioteca.co
     PgLeituraComponent,
     TimelineComponent,
     EditarPerfilComponent,
-    MinhaBibliotecaComponent
+    MinhaBibliotecaComponent,
+    NovoUsuarioComponent
   ],
   imports: [
     BrowserModule,
