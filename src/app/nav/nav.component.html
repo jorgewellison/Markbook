@@ -20,7 +20,7 @@
         <a class="nav-link" [routerLink]="['/pg-leitura']">PÁGINA DE LEITURA</a>
       </li>
     </ul>
-    <div class="row">
+    <div *ngIf='logado()' class="row">
       <div class="col">
         <div ngbDropdown class="d-inline-block">
           <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
@@ -29,9 +29,11 @@
           alt="share">
           </button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>Action - 1</button>
-            <button ngbDropdownItem>Another Action</button>
-            <button ngbDropdownItem>Something else is here</button>
+            <button ngbDropdownItem [routerLink]="['/dashboard/editar-perfil']">Editar perfil</button>
+            <button ngbDropdownItem [routerLink]="['/dashboard/minha-biblioteca']">Minha biblioteca</button>
+            <button ngbDropdownItem>Seguindo / Seguidores</button>
+            <button ngbDropdownItem [routerLink]="['/dashboard/livros/novo']">Adicionar livro</button>
+            <button ngbDropdownItem (click)='logout()' id='sair'>Sair</button>
           </div>
         </div>
       </div>
