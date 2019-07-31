@@ -13,8 +13,9 @@ export class ListaDeLivrosComponent implements OnInit {
   constructor(private service: LivroService) { }
 
   getLivros(): Livro[] {
-    return this.service.getAll();
+    return this.service.getLivros();
   }
+  
   ngOnInit() {
   }
 
