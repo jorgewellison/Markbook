@@ -8,9 +8,14 @@
 .bg-dark {
   margin: 100px 100px;
   text-align: center;
-  width: 70%;
+  width: 40%;
   float: left;
-  margin-left: 224px;
+}
+
+.container{
+  width: 30%;
+  float: right;
+  margin-right: 50px;
 }
 
 .card-body {
