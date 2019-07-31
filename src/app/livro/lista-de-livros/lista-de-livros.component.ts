@@ -8,19 +8,28 @@ import { Livro } from '../livro';
   styleUrls: ['./lista-de-livros.component.css']
 })
 export class ListaDeLivrosComponent implements OnInit {
-  livro: Livro;
+  // livro: Livro;
 
-  constructor(private service: LivroService) { }
+  constructor(private livroService: LivroService) { }
 
   getLivros(): Livro[] {
-    return this.service.getLivros();
+    return this.livroService.getLivros();
   }
 
-  listaVazia() : boolean{
-    return this.service.listaVazia();
+  listaVazia(): boolean {
+    return this.livroService.listaVazia();
   }
-  
+
+  editarLivro(livro: Livro) {
+    this.livroService.adicionar(livro);
+  }
+
+  deletarLivro(livro: Livro) {
+    this.livroService.deletar(livro);
+  }
+
   ngOnInit() {
+
   }
 
 }

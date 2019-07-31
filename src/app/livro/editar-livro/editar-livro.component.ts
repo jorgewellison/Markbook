@@ -17,7 +17,7 @@ export class EditarLivroComponent implements OnInit {
     this.livro.nome = nome;
     this.livro.autor = autor;
     this.livro.imagem = imagem;
-    this.livroService.atualizar(this.livro);
+    this.livroService.adicionar(this.livro);
     // this.router.navigate(['/books', this.book.id]); // TODO: AJUSTAR ESSA ROTA!
   }
 

@@ -9,6 +9,7 @@ import { Livro } from '../livro';
   styleUrls: ['./novo-livro.component.css']
 })
 export class NovoLivroComponent implements OnInit {
+  livro: Livro = new Livro("","","");
 
   constructor(private router: Router, private livroService: LivroService) { }
 
@@ -16,8 +17,12 @@ export class NovoLivroComponent implements OnInit {
   }
 
   novoLivro(nome: string, autor: string, imagem: string) {
-    this.livroService.livros.push(new Livro(nome, autor, imagem));
+    // this.livroService.livros.push(new Livro(nome, autor, imagem));
+    this.livro.nome = nome;
+    this.livro.autor = autor;
+    this.livro.imagem = imagem;
     this.router.navigate(['dashboard/livros']);
+    this.livroService.adicionar(this.livro);
   }
 
 }
