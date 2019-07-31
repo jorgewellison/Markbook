@@ -33,7 +33,7 @@
             <button ngbDropdownItem [routerLink]="['/dashboard/minha-biblioteca']">Minha biblioteca</button>
             <button ngbDropdownItem>Seguindo / Seguidores</button>
             <button ngbDropdownItem [routerLink]="['/dashboard/livros/novo']">Adicionar livro</button>
-            <button ngbDropdownItem (click)='logout()' id='sair'>Sair</button>
+            <button ngbDropdownItem (click)='logout()' id='sair' [routerLink]="['']">Sair</button>
           </div>
         </div>
       </div>

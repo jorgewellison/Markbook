@@ -8,6 +8,7 @@ import { Routes, RouterModule, CanActivate } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListaDeLivrosComponent } from './livro/lista-de-livros/lista-de-livros.component';
 import { AuthGuardService } from './guards/auth.guard';
+import { PgLeituraComponent } from './pg-leitura/pg-leitura/pg-leitura.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'dashboard/livro:id/edit', component: EditarLivroComponent, canActivate: [AuthGuardService]},
   { path: 'dashboard/editar-perfil', component: EditarPerfilComponent, canActivate: [AuthGuardService]},
   { path: 'dashboard/minha-biblioteca', component: MinhaBibliotecaComponent, canActivate: [AuthGuardService]},
+  { path: 'pg-leitura', component: PgLeituraComponent, canActivate: [AuthGuardService]},
 
 ];
 

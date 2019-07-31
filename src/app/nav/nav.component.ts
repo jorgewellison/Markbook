@@ -23,8 +23,6 @@ export class NavComponent implements OnInit {
   logout(){
     this.AuthService.usuarioAutenticado = false;
     this.AuthService.logout();
-    this.AuthService.ocultarNavEmitter.emit(true);
-    this.router.navigate(['']);
   }
 
   ngOnInit() {
