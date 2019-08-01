@@ -15,7 +15,6 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormularioLivroComponent } from './formulario-livro/formulario-livro.component';
-import { UploadFileComponent } from './upload-file/upload-file.component';
 import { ListaDeLivrosComponent } from './livro/lista-de-livros/lista-de-livros.component';
 import { NovoLivroComponent } from './livro/novo-livro/novo-livro.component';
 import { EditarLivroComponent } from './livro/editar-livro/editar-livro.component';
@@ -35,7 +34,6 @@ import { DeletarLivroComponent } from './livro/deletar-livro/deletar-livro.compo
     HomeComponent,
     DashboardComponent,
     FormularioLivroComponent,
-    UploadFileComponent,
     NavComponent,
     ListaDeLivrosComponent,
     NovoLivroComponent,
