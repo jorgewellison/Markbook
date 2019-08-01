@@ -1,5 +1,6 @@
-import { Livro } from './livro';
 import { Injectable } from '@angular/core';
+
+import { Livro } from './livro';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,20 @@ export class LivroService {
   constructor() { }
 
   // adicionar() já fuciona como o atualizar
-  adicionar(livro: Livro){
-    if(!livro.id){ // 0 é false, negar 0 é true. Se for zero no id...
+  adicionar(livro: Livro) {
+    if (!livro.id) { // 0 é false, negar 0 é true. Se for zero no id...
       livro.id = ++this.ultimoId;
     }
     this.livros.push(livro);
     // console.log(this.ultimoId); // verificar se está passando id
+  }
+
+  editar(livro: Livro) {
+    for (let l of this.livros) {
+      if (l.id == livro.id) {
+        this.livros.splice(this.livros.indexOf(l), 0, livro);
+      }
+    }
   }
 
   deletar(livro: Livro) {
@@ -41,12 +50,12 @@ export class LivroService {
   //   return velhoLivro;
   // }
 
-  getLivros(): Livro[]{
+  getLivros(): Livro[] {
     return this.livros;
   }
 
-  listaVazia() : boolean{
-    if (this.livros.length == 0){
+  listaVazia(): boolean {
+    if (this.livros.length == 0) {
       return true;
     }
   }
