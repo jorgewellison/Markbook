@@ -40,9 +40,21 @@ h5 {
 }
 
 .exibicaoLivros{
+  
+  margin-bottom: 110px;
+}
+
+button {
+  text-decoration: none;
+  background-color: none;
+  color: black;
+  border: 0px;
+}
+
+/*
   margin-bottom: 120px;
 }
 
 .container{
   height: 80vh;
-}
+} */

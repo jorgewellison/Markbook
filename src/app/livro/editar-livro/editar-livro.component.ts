@@ -10,15 +10,18 @@ import { Livro } from '../livro';
 })
 export class EditarLivroComponent implements OnInit {
   livro: Livro;
+  
+  constructor(private livroService: LivroService) { 
 
-  constructor(private livroService: LivroService) { }
-
+  }
+  
   editarLivro(nome: string, autor: string, imagem: string) {
     this.livro.nome = nome;
     this.livro.autor = autor;
     this.livro.imagem = imagem;
-    this.livroService.adicionar(this.livro);
-    // this.router.navigate(['/books', this.book.id]); // TODO: AJUSTAR ESSA ROTA!
+    this.livroService.editar(this.livro);
+  
+  // this.router.navigate(['/books', this.book.id]); // TODO: AJUSTAR ESSA ROTA!
   }
 
   voltar() {
@@ -28,6 +31,7 @@ export class EditarLivroComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
 }

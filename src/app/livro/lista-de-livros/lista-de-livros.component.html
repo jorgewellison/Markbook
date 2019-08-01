@@ -22,18 +22,20 @@
 <ul class="exibicaoLivros">
   <li *ngFor="let livro of getLivros()">
     <div class="imagem-cartao">
-      <a href=""[routerLink]="['/pg-leitura']">
-        <img class=imagem [src]="livro.imagem">
+      <a href="">
+        <img class=imagem [src]="livro.imagem" style="box-shadow: 0px 0px 7px 3px grey;">
+      
+<!--       <a href=""[routerLink]="['/pg-leitura']">
+        <img class=imagem [src]="livro.imagem"> -->
+
       </a>
       <h3 class="titulo">{{ livro.nome }}</h3>
       <h5 class="autor">{{ livro.autor }}</h5>
       <br>
-    </div>
-    <div class="editar deletar">
-      <button (click)="deletarLivro(livro)">Deletar</button>
-      <button (click)="editarLivro(livro)">Editar</button>
-      <div>
-        <!-- <app-editar-livro [livro]=livro></app-editar-livro> -->
+      
+      <div class="editar deletar">
+        <button (click)="deletarLivro(livro)">Deletar</button>
+        <button (click)="editarLivro(livro)">Editar</button>
       </div>
     </div>
   </li>
