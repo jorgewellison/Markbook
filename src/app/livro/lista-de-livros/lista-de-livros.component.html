@@ -34,7 +34,9 @@
       <br>
       
       <div class="editar deletar">
-        <button (click)="deletarLivro(livro)">Deletar</button>
+        <app-deletar-livro [livro]="livro"></app-deletar-livro>
+        <!-- <app-editar-livro></app-editar-livro> -->
+        <!-- <button (click)="deletarLivro(livro)">Deletar</button> -->
         <button (click)="editarLivro(livro)">Editar</button>
       </div>
     </div>

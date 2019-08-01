@@ -9,7 +9,7 @@ import { LivroService } from './../livro.service';
   styleUrls: ['./lista-de-livros.component.css']
 })
 export class ListaDeLivrosComponent implements OnInit {
-  // livro: Livro;
+  livro: Livro;
 
   constructor(private livroService: LivroService) { }
 
@@ -21,13 +21,13 @@ export class ListaDeLivrosComponent implements OnInit {
     return this.livroService.listaVazia();
   }
 
-  editarLivro(livro: Livro) {
-    this.livroService.adicionar(livro);
-  }
+  // editarLivro(livro: Livro) {
+  //   this.livroService.adicionar(livro);
+  // }
 
-  deletarLivro(livro: Livro) {
-    this.livroService.deletar(livro);
-  }
+  // deletarLivro(livro: Livro) {
+  //   this.livroService.deletar(livro);
+  // }
 
   ngOnInit() {
 
