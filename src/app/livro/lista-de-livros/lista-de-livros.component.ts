@@ -21,10 +21,6 @@ export class ListaDeLivrosComponent implements OnInit {
     return this.livroService.listaVazia();
   }
 
-  // editarLivro(livro: Livro) {
-  //   this.livroService.adicionar(livro);
-  // }
-
   // deletarLivro(livro: Livro) {
   //   this.livroService.deletar(livro);
   // }
