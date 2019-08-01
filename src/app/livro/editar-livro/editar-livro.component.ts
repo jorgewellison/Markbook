@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { LivroService } from '../livro.service';
 import { Livro } from '../livro';
@@ -9,9 +10,9 @@ import { Livro } from '../livro';
   styleUrls: ['./editar-livro.component.css']
 })
 export class EditarLivroComponent implements OnInit {
-  livro: Livro;
+  @Input() livro: Livro;
   
-  constructor(private livroService: LivroService) { 
+  constructor(private livroService: LivroService, private router: Router) { 
 
   }
   
@@ -21,7 +22,7 @@ export class EditarLivroComponent implements OnInit {
     this.livro.imagem = imagem;
     this.livroService.editar(this.livro);
   
-  // this.router.navigate(['/books', this.book.id]); // TODO: AJUSTAR ESSA ROTA!
+    this.router.navigate(['/livros', this.livro.id]); // TODO: AJUSTAR ESSA ROTA!
   }
 
   voltar() {

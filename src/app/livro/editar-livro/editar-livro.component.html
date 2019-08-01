@@ -3,23 +3,23 @@
 
   <div>
     <label for="nome-livro">Nome do livro:</label>
-    <input type="text" name="nome" id="nome_livro" #nomeLivro>
+    <input type="text" name="nome" id="nome-livro" #nomeLivro>
   </div>
 
   <div>
     <label for="autor-livro">Nome do autor:</label>
-    <input type="text" name="autor" id="autor_livro" #autorLivro>
+    <input type="text" name="autor" id="autor-livro" #autorLivro>
   </div>
 
   <div>
     <label for="imagemLivro">Cole aqui uma URL para a capa:</label>
-    <input type="text" name="imagemLivro" id="imagemLivro" #imagemLivro>
+    <input type="text" name="imagemLivro" id="imagem-livro" #imagemLivro>
   </div>
 
   <!-- <app-upload-file></app-upload-file> -->
 
   <div>
-    <button (click)="editarLivro(nomeLivro.value, autorLivro.value, imagemLivro.value)" type="submit" id="criar_livro_botão">Criar livro</button>
+    <button (click)="editarLivro(nomeLivro.value, autorLivro.value, imagemLivro.value)" type="submit" id="editar-livro">Editar</button>
   </div>
 </form>
 
