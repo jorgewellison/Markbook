@@ -15,7 +15,6 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService]},
-  { path: 'upload', loadChildren: './upload-file/upload-file.module#UploadFileModule', canActivate: [AuthGuardService]},
   { path: 'dashboard/livros', component: ListaDeLivrosComponent, canActivate: [AuthGuardService]},
   { path: 'dashboard/livros/novo', component: NovoLivroComponent, canActivate: [AuthGuardService]},
   { path: 'dashboard/livro:id/edit', component: EditarLivroComponent, canActivate: [AuthGuardService]},
