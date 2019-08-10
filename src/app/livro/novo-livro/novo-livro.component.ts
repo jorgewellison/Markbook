@@ -21,7 +21,7 @@ export class NovoLivroComponent implements OnInit {
     this.livro.nome = nome;
     this.livro.autor = autor;
     this.livro.imagem = imagem;
-    this.router.navigate(['dashboard/livros']);
+    this.router.navigate(['/livros']);
     this.livroService.adicionar(this.livro);
   }
 

@@ -1,8 +1,12 @@
 export class Livro {
-  // nome: string;
-  // autor: string;
-  // imagem: string;
+  nome: string;
+  autor: string;
+  imagem: string;
   public id: number;
 
-  constructor(public nome: string, public autor: string, public imagem: string) { }
+  constructor(nome: string, autor: string, imagem: string) {
+    this.nome = nome;
+    this.autor= autor;
+    this.imagem= imagem;
+   }
 }

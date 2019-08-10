@@ -25,6 +25,7 @@ import { EditarPerfilComponent } from './usuario/editar-perfil/editar-perfil.com
 import { MinhaBibliotecaComponent } from './minha-biblioteca/minha-biblioteca.component';
 import { NovoUsuarioComponent } from './usuario/novo-usuario/novo-usuario.component';
 import { DeletarLivroComponent } from './livro/deletar-livro/deletar-livro.component';
+import { DetalhesLivroComponent } from './livro/detalhes-livro/detalhes-livro.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DeletarLivroComponent } from './livro/deletar-livro/deletar-livro.compo
     EditarPerfilComponent,
     MinhaBibliotecaComponent,
     NovoUsuarioComponent,
-    DeletarLivroComponent
+    DeletarLivroComponent,
+    DetalhesLivroComponent
   ],
   imports: [
     BrowserModule,
