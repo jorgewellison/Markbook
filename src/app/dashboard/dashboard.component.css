@@ -1,17 +1,11 @@
-.dash{
-  width: 100%;
-  background-color: gray;
+.container{
+  position: relative;
 }
 
 .perfil{
-  width: 65%;
-  display: inline;
-  padding: 15px;
-  float: left;
+  padding: 30px;
 }
 
-.timeline{
-  width: 35%;
-  display: inline;
-  float: right;
+.perfil h3{
+  text-align: center;
 }

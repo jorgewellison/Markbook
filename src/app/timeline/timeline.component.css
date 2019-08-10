@@ -1,11 +1,14 @@
 .timeline-publica {
+  padding: 30px;
   width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  background:rgb(49, 46, 46);
 }
 
 .cards h4{
-  color: #ffff;
+  color: black;
 
+}
+
+.cards{
+  text-align: center;
+  margin-left: 80px;
 }
