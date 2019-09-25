@@ -1,66 +1,42 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Pipe } from '@angular/core';
 
 import { Livro } from './livro';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LivroService {
-  ultimoId: number = 0;
-  livros: Livro[] = [];
 
-  constructor() { }
+  private livrosUrl: string;
 
-  // adicionar() já fuciona como o atualizar
-  adicionar(livro: Livro) {
-    if (!livro.id) { // 0 é false, negar 0 é true. Se for zero no id...
-      livro.id = ++this.ultimoId;
-    }
-    this.livros.push(livro);
-    // console.log(this.ultimoId); // verificar se está passando id
+  constructor(private http: HttpClient) { 
+    this.livrosUrl = 'http://localhost:8080/livros'; //Essa url mesmo?
   }
 
-  editar(livro: Livro) {
-    for (let l of this.livros) {
-      if (l.id == livro.id) {
-        this.livros.splice(this.livros.indexOf(l), 0, livro);
-      }
-    }
+  list() {
+    return this.http.get<Livro[]>(this.livrosUrl);
   }
 
-  deletar(livro: Livro) {
-    for (let l of this.livros) {
-      if (l.id == livro.id) {
-        // delete this.livros[this.livros.indexOf(l)];
-        this.livros.splice(this.livros.indexOf(l), 1);
-      }
-    }
+  loadByID(id) {
+    return this.http.get(`${this.livrosUrl}/${id}`)
   }
 
-  // deletar(id: number){
-  //   this.livros = this.livros.filter(todo => todo.id !== id);
-  // }
-
-  // atualizar(novoLivro: Livro): Livro {
-  //   const velhoLivro = this.getById(novoLivro.id);
-  //   if (!velhoLivro){
-  //     return;
-  //   }
-  //   Object.assign(velhoLivro, novoLivro);
-  //   return velhoLivro;
-  // }
-
-  getLivros(): Livro[] {
-    return this.livros;
+  create(livro: Livro) {
+    return this.http.post<Livro>(this.livrosUrl, livro)
   }
 
-  listaVazia(): boolean {
-    if (this.livros.length == 0) {
-      return true;
-    }
+  delete(id: number) {
+    return this.http.delete<Livro>(`${this.livrosUrl}/${id}`)
   }
 
-  // getById(id: number): Livro{
-  //   return this.livros.filter(todo => todo.id === id).pop();
-  // }
+  update(livro: Livro) {
+    return this.http.put<Livro>(`${this.livrosUrl}/${livro.id}`, livro)
+  }
+
+  //.pipe(take(1));
+
+  //: Observable<Livro>
 }

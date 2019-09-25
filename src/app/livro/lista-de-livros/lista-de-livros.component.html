@@ -1,52 +1,26 @@
-<!-- <table>
-  <thead>
-    <tr>
-      <th id="nomeCabecalho">Nome do livro</th>
-      <th id="autoCabecalho">Autor</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr *ngFor="let livro of getLivros()">
-      <td>{{livro.nome}}</td>
-      <td>{{livro.autor}}</td>
-      <td><a [routerLink]="['/dashboard/livro:id']">Mostrar</a></td>
-      <td><a [routerLink]="['/dashboard/livro:id/edit']">Editar</a></td>
-      <td><a data-confirm="Você tem certeza?" rel="nofollow" data-method="delete" [routerLink]="[]">
-        Deletar</a></td>
-    </tr>
-  </tbody>
-</table> -->
-
-<ul class="exibicaoLivros">
-  <li *ngFor="let livro of getLivros()">
-    <div class="imagem-cartao">
-      <a href="">
-        <img class=imagem [src]="livro.imagem" style="box-shadow: 0px 0px 7px 3px grey;">
-
-<!--       <a href=""[routerLink]="['/pg-leitura']">
-        <img class=imagem [src]="livro.imagem"> -->
-
-      </a>
-      <h3 class="titulo">{{ livro.nome }}</h3>
-      <h5 class="autor">{{ livro.autor }}</h5>
-      <br>
-
-      <app-detalhes-livro></app-detalhes-livro>
-
-      <div class="editar deletar">
-        <app-deletar-livro [livro]="livro"></app-deletar-livro>
-        <!-- <app-editar-livro [livro]="livro"></app-editar-livro> -->
-        <!-- <button (click)="deletarLivro(livro)">Deletar</button> -->
-        <!-- <button (click)="editarLivro(livro)">Editar</button> -->
-      </div>
-    </div>
-  </li>
-</ul>
-
 <div *ngIf="listaVazia()" class="container">
   <p>Não existem livros cadastrados.</p>
 </div>
 
-<router-outlet></router-outlet>
+<div>
+  <button [routerLink]="['novo-livro']">Adicionar livro</button>
+</div>
+
+<ul class="exibicaoLivros">
+  <li *ngFor="let livro of livros">
+    <div class="imagem-cartao">   
+      <a href="">
+        <img class=imagem [src]="livro.imagem" style="box-shadow: 0px 0px 7px 3px grey;">
+      </a>
+      <h2 class="id">{{ livro.id }}</h2>
+      <h3 class="titulo">{{ livro.nome }}</h3>
+      <h5 class="autor">{{ livro.autor }}</h5>
+      <br>
+      <!-- <h3 class="detalhes">{{ livro.detalhes }}</h3> -->
+      <div>
+        <button (click)="onEdit(livro.id)">Editar</button>
+        <button (click)="onRemove(livro.id)">Remover</button>
+      </div>
+    </div>
+  </li>
+</ul>

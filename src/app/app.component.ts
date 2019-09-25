@@ -16,8 +16,6 @@ export class AppComponent {
 
   }
 
-
-
   ngOnInit(){
     this.authService.mostrarNavEmitter.subscribe(
       mostrar => this.mostrarNav = mostrar

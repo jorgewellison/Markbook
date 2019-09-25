@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Livro } from '../livro';
 import { LivroService } from './../livro.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-lista-de-livros',
@@ -9,24 +10,37 @@ import { LivroService } from './../livro.service';
   styleUrls: ['./lista-de-livros.component.css']
 })
 export class ListaDeLivrosComponent implements OnInit {
-  livro: Livro;
 
-  constructor(private livroService: LivroService) { }
+  livros: Livro[]; 
+  livroSelecionado: Livro;
 
-  getLivros(): Livro[] {
-    return this.livroService.getLivros();
-  }
-
-  listaVazia(): boolean {
-    return this.livroService.listaVazia();
-  }
-
-  // deletarLivro(livro: Livro) {
-  //   this.livroService.deletar(livro);
-  // }
+  constructor(private service: LivroService, 
+    private router: Router, 
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit() {
+    this.service.list().subscribe(dados => this.livros = dados);
+  }
 
+  onRefresh() {
+    this.service.list().subscribe(dados => this.livros = dados);
+  }
+
+  onEdit(id) {
+    this.router.navigate(['editar-livro', id], { relativeTo: this.route}); 
+  }
+
+  onRemove(livro) {
+    this.livroSelecionado = livro;
+    this.service.delete(this.livroSelecionado.id).subscribe(sucesso => {
+      this.onRefresh();
+      alert('Livro deletado com sucesso!');
+    });
+  }
+
+  listaVazia() {
+    return (this.livros.length == 0);
   }
 
 }
