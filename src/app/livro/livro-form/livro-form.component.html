@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+  <h3>Preencha os dados e adicione o livro</h3>
+
+  <div>
+    <label for="nome">Nome do livro:</label><br>
+    <input type="text" name="nome" id="nome" formControlNome="nome"> 
+  </div>
+
+  <div>
+    <label for="autor">Nome do autor:</label><br>
+    <input type="text" name="autor" id="autor" formControlAutor="autor">
+  </div>
+
+  <div>
+    <label for="imagem">Cole aqui uma URL para a capa:</label><br>
+    <input type="text" name="imagem" id="imagem" formControlImagem="src">
+  </div>
+
+  <div>
+    <button type="submit" (click)="onSubmit" type="submit">Salvar</button>
+    <button type="button" (click)="onCancel" type="submit">Cancelar</button>
+  </div>
+
+</form>
+<router-outlet></router-outlet>
