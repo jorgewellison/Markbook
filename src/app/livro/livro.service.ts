@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Pipe } from '@angular/core';
 
 import { Livro } from './livro';
 import { Observable } from 'rxjs';
@@ -16,24 +17,26 @@ export class LivroService {
   }
 
   list() {
-    return this.http.get<Livro[]>(this.livrosUrl).pipe(take(1));
+    return this.http.get<Livro[]>(this.livrosUrl);
   }
 
   loadByID(id) {
-    return this.http.get(`${this.livrosUrl}/${id}`).pipe(take(1));
+    return this.http.get(`${this.livrosUrl}/${id}`)
   }
 
-  create(livro: Livro): Observable<Livro> {
-    return this.http.post<Livro>(this.livrosUrl, livro).pipe(take(1));
+  create(livro: Livro) {
+    return this.http.post<Livro>(this.livrosUrl, livro)
   }
 
-  delete(id: number): Observable<{}> {
-    return this.http.delete<Livro>(`${this.livrosUrl}/${id}`).pipe(take(1));
+  delete(id: number) {
+    return this.http.delete<Livro>(`${this.livrosUrl}/${id}`)
   }
 
-  update(livro: Livro): Observable<Livro> {
-    return this.http.put<Livro>(`${this.livrosUrl}/${livro.id}`, livro).pipe(take(1));
+  update(livro: Livro) {
+    return this.http.put<Livro>(`${this.livrosUrl}/${livro.id}`, livro)
   }
 
   //.pipe(take(1));
+
+  //: Observable<Livro>
 }

@@ -4,7 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { LivroService } from '../livro.service';
-import { cursorTo } from 'readline';
 
 @Component({
   selector: 'app-livro-form',

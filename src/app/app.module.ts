@@ -39,8 +39,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     EditarPerfilComponent,
     MinhaBibliotecaComponent,
     NovoUsuarioComponent,
-    LivroFormComponent,
-    ReactiveFormsModule,
+    LivroFormComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +47,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthServiceService,

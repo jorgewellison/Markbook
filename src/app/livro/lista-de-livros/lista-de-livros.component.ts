@@ -24,7 +24,7 @@ export class ListaDeLivrosComponent implements OnInit {
   }
 
   onRefresh() {
-    this.livros = this.service.list();
+    this.service.list().subscribe(dados => this.livros = dados);
   }
 
   onEdit(id) {
@@ -33,7 +33,7 @@ export class ListaDeLivrosComponent implements OnInit {
 
   onRemove(livro) {
     this.livroSelecionado = livro;
-    this.service.delete(livroSelecionado.id).subscribe(sucesso => {
+    this.service.delete(this.livroSelecionado.id).subscribe(sucesso => {
       this.onRefresh();
       alert('Livro deletado com sucesso!');
     });
